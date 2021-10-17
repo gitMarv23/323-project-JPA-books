@@ -1,4 +1,5 @@
 ----------------------------------------------------------------
+<<<<<<< HEAD
 Sun Oct 17 03:02:45 UTC 2021:
 Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance a816c00e-017c-8c33-8160-000007508490 
 on database directory memory:C:\Users\marvin\IdeaProjects\323 Project JPA Books\Books with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@7aec35a 
@@ -6,6 +7,15 @@ Loaded from file:/C:/Users/marvin/AppData/Roaming/JetBrains/IntelliJIdea2021.2/j
 java.vendor=JetBrains s.r.o.
 java.runtime.version=11.0.12+7-b1504.28
 user.dir=C:\Users\marvin\IdeaProjects\323 Project JPA Books
+=======
+Sat Oct 16 21:00:11 PDT 2021:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-017c-8c68-302d-00000ed1a7b8 
+on database directory C:\Users\llim8\Documents\GitHub\323-project-JPA-books\database\CarClub with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa 
+Loaded from file:/C:/Users/llim8/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=17+35-2724
+user.dir=C:\Users\llim8\Documents\GitHub\323-project-JPA-books
+>>>>>>> jpa mini hw template part 2
 os.name=Windows 10
 os.arch=amd64
 os.version=10.0
