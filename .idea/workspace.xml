@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="jpa mini hw template">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/75648be9-def4-4d09-a18b-f57b8247cede.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/75648be9-def4-4d09-a18b-f57b8247cede/storage_v2/_src_/schema/SYS.rUIBAA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/75648be9-def4-4d09-a18b-f57b8247cede/storage_v2/_src_/schema/SYSCS_UTIL.JC_i2A.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/75648be9-def4-4d09-a18b-f57b8247cede/storage_v2/_src_/schema/SYSIBM.hzyvkg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy-datasource.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_derby_derby_10_14_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_jakarta_persistence_2_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_javax_persistence_2_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_antlr_2_7_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_asm_2_7_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_core_2_7_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_jpa_2_7_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_jpa_jpql_2_7_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/README_DO_NOT_TOUCH_FILES.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/db.lck" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/log/README_DO_NOT_TOUCH_FILES.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/log/log.ctrl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/log/log3.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/log/logmirror.ctrl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/README_DO_NOT_TOUCH_FILES.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c10.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c101.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c111.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c121.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c130.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c141.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c150.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c161.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c171.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c180.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c191.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c1a1.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c1b1.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c1c0.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c1d1.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c1e0.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c1f1.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c20.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c200.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c211.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c221.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c230.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c241.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c251.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c260.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c271.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c281.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c290.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c2a1.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c2b1.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c2c1.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c2d0.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c2e1.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c2f0.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c300.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c31.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c311.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c321.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c331.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c340.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c351.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c361.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c371.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c380.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c391.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c3a1.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c3b1.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c3c0.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c3d1.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c3e1.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c3f1.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c400.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c41.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c411.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c421.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c430.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c441.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c451.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c461.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c470.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c481.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c4e0.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c4f1.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c51.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c60.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c71.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c81.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c830.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c841.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c850.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c861.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c871.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c880.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c891.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c8a1.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c8b1.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/c90.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/ca1.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/cb1.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/cc0.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/cd1.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/ce1.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/cf0.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/d7a0.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/d7b1.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/d7c0.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/d7d1.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/d7e1.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/d7f0.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/d801.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/d811.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/seg0/d821.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/CarClub/service.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/derby.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/csulb/cecs323/app/CarClub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/csulb/cecs323/model/Cars.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/csulb/cecs323/model/Owners.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/csulb/cecs323/model/auto_body_styles.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/sql/seed-data.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Lawrence" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="JPA Inspector" value="true" />
+        <entry key="JPA Palette" value="true" />
+        <entry key="JPA Structure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="JPA Inspector" value="true" />
+        <entry key="JPA Palette" value="false" />
+        <entry key="JPA Structure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectId" id="1zcB5oovxI8CpaiGFVcvLEWykNc" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="derby" />
+    <property name="RunConfigurationTargetLRU" value="39b82a1d-4ad1-4f61-b818-22768f6dc330&#10;75648be9-def4-4d09-a18b-f57b8247cede/schema/&quot;APP&quot;" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="jpb.reverseEngineering" />
+  </component>
+  <component name="RunManager" selected="Application.CarClub">
+    <configuration name="CarClub" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="csulb.cecs323.app.CarClub" />
+      <module name="323 Project JPA Books" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="csulb.cecs323.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Books.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/Books.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="39b82a1d-4ad1-4f61-b818-22768f6dc330" />
+      <method v="2">
+        <option name="DisconnectBeforeRunTask">
+          <option name="dataSourceId" value="39b82a1d-4ad1-4f61-b818-22768f6dc330" />
+        </option>
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CarClub" />
+        <item itemvalue="Database Script.Books.sql" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="" />
+      <created>1634437315243</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1634437315243</updated>
+      <workItem from="1634437316801" duration="2840000" />
+      <workItem from="1634441019496" duration="2458000" />
+    </task>
+    <task id="LOCAL-00001" summary="jpa mini hw template">
+      <created>1634443331775</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1634443331775</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="jpa mini hw template" />
+    <option name="LAST_COMMIT_MESSAGE" value="jpa mini hw template" />
+  </component>
+</project>
