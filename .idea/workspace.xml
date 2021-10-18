@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="marvin wipe and rebuild based on brown's recommendations">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Cars.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Owners.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/auto_body_styles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/seed-data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CECS 323 Project JPA - Books.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,10 +94,10 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
-  <component name="RunManager" selected="Application.CarClub">
-    <configuration name="CarClub" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="csulb.cecs323.app.CarClub" />
-      <module name="323 Project JPA Books" />
+  <component name="RunManager" selected="Application.Library">
+    <configuration name="Library" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="csulb.cecs323.app.Library" />
+      <module name="cecs323-jpa-CarClub" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="csulb.cecs323.app.*" />
@@ -110,7 +120,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CarClub" />
+        <item itemvalue="Application.Library" />
         <item itemvalue="Database Script.Books.sql" />
       </list>
     </recent_temporary>
@@ -129,7 +139,7 @@
       <workItem from="1634536494064" duration="72000" />
       <workItem from="1634536615091" duration="3470000" />
       <workItem from="1634547155349" duration="160000" />
-      <workItem from="1634577526978" duration="1009000" />
+      <workItem from="1634577526978" duration="3730000" />
     </task>
     <task id="LOCAL-00001" summary="jpa mini hw template">
       <created>1634443331775</created>
