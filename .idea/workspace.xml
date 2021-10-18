@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="marvin wipe and rebuild based on brown's recommendations">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +34,16 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitRewordedCommitMessages">
+    <option name="commitMessagesMapping">
+      <RewordedCommitMessageMapping>
+        <option name="originalMessage" value="marvin wipe and rebuild based on brown's recommendations" />
+        <option name="rewordedMessage" value="marvin wipe and rebuild based on brown's recommendations&#10;&#10;&#10;marvin wipe and rebuild based on brown's recommendations" />
+      </RewordedCommitMessageMapping>
+    </option>
+    <option name="currentCommit" value="1" />
+    <option name="onto" value="22fc89869fc0f11a970c3b2008b9b3b43caaad34" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -69,10 +78,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="jpb.reverseEngineering" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RunManager" selected="Application.CarClub">
     <configuration name="CarClub" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -117,7 +127,9 @@
       <workItem from="1634441019496" duration="2458000" />
       <workItem from="1634444457267" duration="516000" />
       <workItem from="1634536494064" duration="72000" />
-      <workItem from="1634536615091" duration="3149000" />
+      <workItem from="1634536615091" duration="3470000" />
+      <workItem from="1634547155349" duration="160000" />
+      <workItem from="1634577526978" duration="616000" />
     </task>
     <task id="LOCAL-00001" summary="jpa mini hw template">
       <created>1634443331775</created>
@@ -133,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634536775791</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="marvin wipe and rebuild based on brown's recommendations">
+      <created>1634546782136</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1634546782136</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,5 +175,9 @@
     <MESSAGE value="jpa mini hw template" />
     <MESSAGE value="marvin wipe and rebuild based on brown's recommendations" />
     <option name="LAST_COMMIT_MESSAGE" value="marvin wipe and rebuild based on brown's recommendations" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
