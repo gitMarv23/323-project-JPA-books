@@ -34,12 +34,11 @@ import java.util.logging.Logger;
  */
 public class Library {
    /**
-    * Y
-    * ou will likely need the entityManager in a great many functions throughout your application.
+    * You will likely need the entityManager in a great many functions throughout your application.
     * Rather than make this a global variable, we will make it an instance variable within the CarClub
     * class, and create an instance of CarClub in the main.
     */
-   private EntityManager entityManager; 
+   private EntityManager entityManager;
 
    /**
     * The Logger can easily be configured to log to a file, rather than, or in addition to, the console.
