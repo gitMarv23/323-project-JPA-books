@@ -19,8 +19,10 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.logging.Logger;
 
 /**
@@ -39,6 +41,8 @@ public class Library {
     * class, and create an instance of CarClub in the main.
     */
    private EntityManager entityManager;
+
+   private static Scanner input = new Scanner(System.in);
 
    /**
     * The Logger can easily be configured to log to a file, rather than, or in addition to, the console.
@@ -63,13 +67,29 @@ public class Library {
       EntityManagerFactory factory = Persistence.createEntityManagerFactory("Library");
       EntityManager manager = factory.createEntityManager();
       // Create an instance of CarClub and store our new EntityManager as an instance variable.
-      Library carclub = new Library(manager);
+      Library library = new Library(manager);
+
+
+      EntityTransaction tx = manager.getTransaction();
+
+      tx.begin();
+      List<Publishers> publishers = new ArrayList<Publishers>();
+      publishers.add(new Publishers("Bob","Bob Inc.","44532"));
+
+      library.deletePublishers();
+      library.addPublisher();
+      library.createEntity(publishers);
+      tx.commit();
+
+      System.out.println("Completed Satisfactorily");
+
+      LOGGER.fine("End of Transaction");
 
 
       // Any changes to the database need to be done within a transaction.
       // See: https://en.wikibooks.org/wiki/Java_Persistence/Transactions
 
-      LOGGER.fine("Begin of Transaction");
+      /*LOGGER.fine("Begin of Transaction");
       EntityTransaction tx = manager.getTransaction();
 
       tx.begin();
@@ -81,7 +101,7 @@ public class Library {
       owners.add(new Owners("Leck", "Carl", "714-321-3729"));
       owners.add(new Owners("Guitierez", "Luis", "562-982-2899"));
       // Create the list of owners in the database.
-      carclub.createEntity (owners);
+      library.createEntity (owners);
 
       //give each owner at least 2 cars
       List <Cars> cars = new ArrayList<Cars>();
@@ -94,13 +114,71 @@ public class Library {
       cars.add((new Cars("4T4BF1FK4CR236137", "Lexus", "RX", 2020, owners.get(2), new auto_body_styles())));
 
       // Create list of owners in the database
-      carclub.createEntity(cars);
+      library.createEntity(cars);
 
       // Commit the changes so that the new data persists and is visible to other users.
       tx.commit();
-      LOGGER.fine("End of Transaction");
+      LOGGER.fine("End of Transaction");*/
 
    } // End of the main method
+
+   public void addPublisher(){
+      boolean nameCheck = false;
+      while(!nameCheck) {
+         System.out.println("What is the name of the new publisher?");
+         String userName = input.next();
+         input.nextLine();
+         try{
+            List<Publishers> publisher = this.entityManager.createNamedQuery("ReturnPublisher",
+                    Publishers.class).setParameter(1, userName).getResultList();
+            if (publisher.size() == 0) {
+               nameCheck= true;
+               System.out.println("What is the email of the publisher?");
+               String userEmail = input.next();
+               input.nextLine();
+               System.out.println("What is the phone number?");
+               String userPhone = input.next();
+               input.nextLine();
+               ArrayList<Publishers> userPublisher = new ArrayList<Publishers>();
+               userPublisher.add(new Publishers(userName,userEmail,userPhone));
+               this.createEntity(userPublisher);
+            } // end of if statement
+            else{
+               System.out.println("Sorry, there already is a publisher under that name.");
+            }
+         }
+         catch(Exception e){
+            System.out.println("Sorry, someone by that name already exists.");
+         }
+      }
+   }
+
+   public void deletePublishers(){
+      List<Publishers> publishers = this.entityManager.createNamedQuery("ReturnAllPublisher", Publishers.class).getResultList();
+      boolean userChoice = false;
+      while(!userChoice){
+         for(Publishers publisher : publishers){
+            System.out.println(publisher.toString());
+         }
+         System.out.println("Please enter the name of the publisher you want to delete.");
+         String userName = input.next();
+         input.nextLine();
+         try{
+            List<Publishers> publisher = this.entityManager.createNamedQuery("ReturnPublisher",
+                    Publishers.class).setParameter(1, userName).getResultList();
+            if (publisher.size() == 0) {
+            }
+            else{
+               System.out.println("Publisher has been successfully deleted.");
+               this.entityManager.remove(entityManager.find(Publishers.class, userName));
+               userChoice = true;
+            }
+         }
+         catch(Exception e){
+            System.out.println("Why you gotta break on me?");
+         }
+      }
+   }
 
    /**
     * Create and persist a list of objects to the database.
