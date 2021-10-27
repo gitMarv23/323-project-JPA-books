@@ -73,12 +73,36 @@ public class Library {
       EntityTransaction tx = manager.getTransaction();
 
       tx.begin();
-      List<Publishers> publishers = new ArrayList<Publishers>();
-      publishers.add(new Publishers("Bob","Bob Inc.","44532"));
 
-      library.deletePublishers();
-      library.addPublisher();
-      library.createEntity(publishers);
+      System.out.println("Welcome to JPA Books!");
+      boolean userLeaves = false;
+      while(!userLeaves) {
+         System.out.println("Please select what you want to do today.\n" +
+                 "1. View All Publishers\n2. Add A New Publisher\n3. Remove a Publisher" +
+                 "\n4. View all Books\n5. Add a New Book\n6. Delete a Book\n7. Update a Book" +
+                 "\n8. View all Writing Groups\n9. Add A New Author");
+         String userChoice = input.next();
+         input.nextLine();
+         switch (userChoice){
+            case "1": List<Publishers> publishers = library.entityManager.createNamedQuery("ReturnAllPublisher", Publishers.class).getResultList();
+            if(publishers.isEmpty()){
+               System.out.println("Oops! The publisher list is empty right now, so please enter in new publishers before trying again.");
+            }
+            else{
+               for(Publishers publisher: publishers ){
+                  System.out.println(publisher.toString());
+               }
+            }
+            break;
+            case "2": library.addPublisher();
+            break;
+            case "3": library.deletePublishers();
+            break;
+            default:userLeaves = true;
+            break;
+         }
+      }
+
       tx.commit();
 
       System.out.println("Completed Satisfactorily");
@@ -122,6 +146,7 @@ public class Library {
 
    } // End of the main method
 
+
    public void addPublisher(){
       boolean nameCheck = false;
       while(!nameCheck) {
@@ -155,28 +180,34 @@ public class Library {
 
    public void deletePublishers(){
       List<Publishers> publishers = this.entityManager.createNamedQuery("ReturnAllPublisher", Publishers.class).getResultList();
-      boolean userChoice = false;
-      while(!userChoice){
-         for(Publishers publisher : publishers){
-            System.out.println(publisher.toString());
-         }
-         System.out.println("Please enter the name of the publisher you want to delete.");
-         String userName = input.next();
-         input.nextLine();
-         try{
-            List<Publishers> publisher = this.entityManager.createNamedQuery("ReturnPublisher",
-                    Publishers.class).setParameter(1, userName).getResultList();
-            if (publisher.size() == 0) {
+      if(publishers.size()>0) {
+         boolean userChoice = false;
+         while (!userChoice) {
+            for (Publishers publisher : publishers) {
+               System.out.println(publisher.toString());
             }
-            else{
-               System.out.println("Publisher has been successfully deleted.");
-               this.entityManager.remove(entityManager.find(Publishers.class, userName));
-               userChoice = true;
+            System.out.println("Please enter the name of the publisher you want to delete.");
+            String userName = input.next();
+            input.nextLine();
+            try {
+               List<Publishers> publisher = this.entityManager.createNamedQuery("ReturnPublisher",
+                       Publishers.class).setParameter(1, userName).getResultList();
+               if (publisher.size() == 0) {
+                  System.out.println("Sorry, that name doesn't exist in our tables. Please input one of the names displayed.");
+               }
+               else {
+                  System.out.println("Publisher has been successfully deleted.");
+                  this.entityManager.remove(entityManager.find(Publishers.class, userName));
+                  userChoice = true;
+               }
+            }
+            catch (Exception e) {
+               System.out.println("It seems like you entered an invalid name of a publisher. Please input the correct name from the list we provided..");
             }
          }
-         catch(Exception e){
-            System.out.println("Why you gotta break on me?");
-         }
+      }
+      else{
+         System.out.println("Sorry, but we don't have any publishers stored in our database. Add new publishers to remove some.");
       }
    }
 

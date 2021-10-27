@@ -2,6 +2,7 @@ package csulb.cecs323.model;
 
 
 import javax.persistence.*;
+import java.util.List;
 
 @Table(name = "Publishers", uniqueConstraints = {
         @UniqueConstraint(name = "uc_publishers_email", columnNames = {"email", "phoneNumber"})
@@ -25,6 +26,9 @@ public class Publishers {
     @Column(nullable = false, length = 80)
     private String name;
 
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "publisherName")
+    private List<Books> books;
+
     @Column(nullable = false, length = 80)
     private String email;
 
@@ -43,7 +47,7 @@ public class Publishers {
 
     @Override
     public String toString(){
-        return "Publishers - Name: " + this.name + " Email: " + this.email +
-                " Phone: " + this.phone;
+        return "Publishers - Name: " + this.name + "   Email: " + this.email +
+                "   Phone: " + this.phone;
     }
 }
