@@ -107,8 +107,15 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Library" />
+      <item itemvalue="Database Script.Books.sql" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Database Script.Books.sql" />
+        <item itemvalue="Application.Library" />
+        <item itemvalue="Database Script.Books.sql" />
         <item itemvalue="Application.Library" />
         <item itemvalue="Database Script.Books.sql" />
       </list>
