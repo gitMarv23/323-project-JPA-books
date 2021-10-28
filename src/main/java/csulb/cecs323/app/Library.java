@@ -77,27 +77,27 @@ public class Library {
       System.out.println("Welcome to JPA Books!");
       boolean userLeaves = false;
       while(!userLeaves) {
-         System.out.println("Please select what you want to do today.\n" +
-                 "1. View All Publishers\n2. Add A New Publisher\n3. Remove a Publisher" +
-                 "\n4. View all Books\n5. Add a New Book\n6. Delete a Book\n7. Update a Book" +
-                 "\n8. View all Writing Groups\n9. Add A New Author");
+         System.out.println("Please select what you want to do today. Make absolutely sure that you enter '1', and nothing more. " +
+                 "Otherwise, you'll exit the entire program.\n" +
+                 "1. View All Publishers\n2. Add A New Publisher" +
+                 "\n3. View all Books\n4. Add a New Book\n5. Delete a Book\n6. Update a Book" +
+                 "\n7. View all Authors\n8. Add A New Author\nAnything Else: Exit Program");
          String userChoice = input.next();
          input.nextLine();
          switch (userChoice){
-            case "1": List<Publishers> publishers = library.entityManager.createNamedQuery("ReturnAllPublisher", Publishers.class).getResultList();
-            if(publishers.isEmpty()){
-               System.out.println("Oops! The publisher list is empty right now, so please enter in new publishers before trying again.");
-            }
-            else{
-               for(Publishers publisher: publishers ){
-                  System.out.println(publisher.toString());
-               }
-            }
+            case "1": library.displayAllPublishers();
             break;
             case "2": library.addPublisher();
             break;
-            case "3": library.deletePublishers();
+            case "3": if(library.displayAllAuthoringEntities() && library.displayAllPublishers()) {library.displayAllBooks();}
             break;
+            case "4": library.addBook();
+            break;
+            case "5": library.deleteBook();
+            break;
+            case "7": if(library.displayAllAuthoringEntities()) {library.displayAllAuthoringEntities();}
+            break;
+            case "8": library.authoringMenu();
             default:userLeaves = true;
             break;
          }
@@ -110,42 +110,192 @@ public class Library {
       LOGGER.fine("End of Transaction");
 
 
-      // Any changes to the database need to be done within a transaction.
-      // See: https://en.wikibooks.org/wiki/Java_Persistence/Transactions
-
-      /*LOGGER.fine("Begin of Transaction");
-      EntityTransaction tx = manager.getTransaction();
-
-      tx.begin();
-      // List of owners that I want to persist.  I could just as easily done this with the seed-data.sql
-      List <Owners> owners = new ArrayList<Owners>();
-      // Load up my List with the Entities that I want to persist.  Note, this does not put them
-      // into the database.
-      owners.add(new Owners("Reese", "Mike", "714-892-5544"));
-      owners.add(new Owners("Leck", "Carl", "714-321-3729"));
-      owners.add(new Owners("Guitierez", "Luis", "562-982-2899"));
-      // Create the list of owners in the database.
-      library.createEntity (owners);
-
-      //give each owner at least 2 cars
-      List <Cars> cars = new ArrayList<Cars>();
-
-      cars.add((new Cars("TRUWT28N651011265", "Ford", "F-150", 2007, owners.get(0), new auto_body_styles())));
-      cars.add((new Cars("1HD1BX510BB027648", "Chevy", "Suburban", 2001, owners.get(0), new auto_body_styles())));
-      cars.add((new Cars("1GNDV23L26D236839", "Toyota", "Tacoma", 2016, owners.get(1), new auto_body_styles())));
-      cars.add((new Cars("2HGES26772H566107", "Acura", "Integra", 2011, owners.get(1), new auto_body_styles())));
-      cars.add((new Cars("1FTSX21P05EC23578", "Lincoln", "Navigator", 2015, owners.get(2), new auto_body_styles())));
-      cars.add((new Cars("4T4BF1FK4CR236137", "Lexus", "RX", 2020, owners.get(2), new auto_body_styles())));
-
-      // Create list of owners in the database
-      library.createEntity(cars);
-
-      // Commit the changes so that the new data persists and is visible to other users.
-      tx.commit();
-      LOGGER.fine("End of Transaction");*/
-
    } // End of the main method
 
+   public void authoringMenu(){
+      boolean userLeaves = false;
+      while(!userLeaves) {
+         System.out.println("Please select one of the options. Be sure to ONLY input '1' if you want the first option;" +
+                 "otherwise, you will leave this menu\n1. Add A New Writing Group\n2. Add a New Individual Author" +
+                 "\n3. Add a New Ad Hoc Team\n4. Add an Author to an Ad Hoc Team\nAnything Else: Exit Authoring Menu");
+         String userChoice = input.next();
+         input.nextLine();
+         switch (userChoice) {
+            case "1": this.addWritingGroup();
+               break;
+            case "2": this.addIndividualAuthor();
+               break;
+            case "3": this.addAdHocTeam();
+               break;
+            case "4": this.addAuthorToAdHoc();
+               break;
+            default:
+               userLeaves = true;
+               break;
+         }
+      }
+   }
+
+   public void addWritingGroup(){
+
+   }
+
+   public void addIndividualAuthor(){
+
+   }
+
+   public void addAdHocTeam(){
+
+   }
+
+   public void addAuthorToAdHoc(){
+
+   }
+
+   public boolean displayAllAuthoringEntities(){
+      try {
+         for (AuthoringEntities author : this.entityManager.createNamedQuery("ReturnAllAuthors", AuthoringEntities.class).getResultList()) {
+            System.out.println(author.toString());
+         }
+         return true;
+      }
+      catch(Exception e){
+         System.out.println("Sorry, you have no existing authors in the database.");
+         return false;
+      }
+   }
+
+   public AuthoringEntities pickAuthoringEntity(){
+      boolean userChoice = false;
+      while(!userChoice){
+         this.displayAllAuthoringEntities();
+         System.out.println("Please enter the email of the author you want to pick.");
+         String userAuthor = input.next();
+         input.nextLine();
+         List<AuthoringEntities> author = this.entityManager.createNamedQuery("ReturnAuthor",AuthoringEntities.class).setParameter(1,userAuthor).getResultList();
+         if(author.size()==0){
+            System.out.println("Sorry, you entered an invalid publisher name.");
+         }
+         else{
+            return author.get(0);
+         }
+      }
+      return null;
+   }
+
+   public boolean displayAllBooks(){
+      try {
+         for (Books book : this.entityManager.createNamedQuery("ReturnAllBooks", Books.class).getResultList()) {
+            System.out.println(book.toString());
+         }
+         return true;
+      }
+      catch(Exception e){
+         System.out.println("Sorry, you have no existing books in the database.");
+         return false;
+      }
+   }
+
+   public void addBook(){
+      boolean bookCheck = false;
+      while(!bookCheck) {
+         System.out.println("What is the ISBN of the new book?");
+         String userISBN = input.next();
+         input.nextLine();
+         try{
+            List<Books> book = this.entityManager.createNamedQuery("ReturnBook",
+                    Books.class).setParameter(1, userISBN).getResultList();
+            if (book.size() == 0) {
+               bookCheck= true;
+               System.out.println("What is the title of the publisher?");
+               String userTitle = input.next();
+               input.nextLine();
+               System.out.println("What year was this book published?");
+               int userYear = input.nextInt();
+               input.nextLine();
+               Publishers userPublisher = this.pickPublisher();
+               AuthoringEntities userAuthor = this.pickAuthoringEntity();
+               ArrayList<Books> userBook = new ArrayList<Books>();
+               userBook.add(new Books(userISBN,userTitle,userYear, userPublisher,userAuthor));
+               this.createEntity(userBook);
+            } // end of if statement
+            else{
+               System.out.println("Sorry, there already is a publisher under that name.");
+            }
+         }
+         catch(Exception e){
+            System.out.println("Sorry, someone by that name already exists.");
+         }
+      }
+   }
+
+   public void deleteBook(){
+      List<Books> booksList = this.entityManager.createNamedQuery("ReturnAllBooks", Books.class).getResultList();
+      if(booksList.size()>0) {
+         boolean userChoice = false;
+         while (!userChoice) {
+            for (Books book : booksList) {
+               System.out.println(book.toString());
+            }
+            System.out.println("Please enter the ISBN of the book you want to delete.");
+            String userName = input.next();
+            input.nextLine();
+            try {
+               List<Books> book = this.entityManager.createNamedQuery("ReturnBook",
+                       Books.class).setParameter(1, userName).getResultList();
+               if (book.size() == 0) {
+                  System.out.println("Sorry, that ISBN doesn't exist in our tables. Please input one of the ISBN's displayed.");
+               }
+               else {
+                  System.out.println("ISBN has been successfully deleted.");
+                  this.entityManager.remove(entityManager.find(Books.class, userName));
+                  userChoice = true;
+               }
+            }
+            catch (Exception e) {
+               System.out.println("It seems like you entered an invalid ISBN. Please input the correct ISBN from the list we provided.");
+            }
+         }
+      }
+      else{
+         System.out.println("Sorry, but we don't have any books stored in our database. Add new books to remove some.");
+      }
+   }
+
+   public void updateBook(){
+
+   }
+
+   public boolean displayAllPublishers(){
+      try {
+         for (Publishers publisher : this.entityManager.createNamedQuery("ReturnAllPublisher", Publishers.class).getResultList()) {
+            System.out.println(publisher.toString());
+         }
+         return true;
+      }
+      catch(Exception e){
+         System.out.println("Sorry, there are no existing publishers inside the database.");
+         return false;
+      }
+   }
+
+   public Publishers pickPublisher(){
+      boolean userChoice = false;
+      while(!userChoice){
+         this.displayAllPublishers();
+         System.out.println("Please enter the name of the publisher you want to select.");
+         String userPublisher = input.next();
+         input.nextLine();
+         List<Publishers> publisher = this.entityManager.createNamedQuery("ReturnPublisher",Publishers.class).setParameter(1,userPublisher).getResultList();
+         if(publisher.size()==0){
+            System.out.println("Sorry, you entered an invalid publisher name.");
+         }
+         else{
+            return publisher.get(0);
+         }
+      }
+      return null;
+   }
 
    public void addPublisher(){
       boolean nameCheck = false;
@@ -178,38 +328,6 @@ public class Library {
       }
    }
 
-   public void deletePublishers(){
-      List<Publishers> publishers = this.entityManager.createNamedQuery("ReturnAllPublisher", Publishers.class).getResultList();
-      if(publishers.size()>0) {
-         boolean userChoice = false;
-         while (!userChoice) {
-            for (Publishers publisher : publishers) {
-               System.out.println(publisher.toString());
-            }
-            System.out.println("Please enter the name of the publisher you want to delete.");
-            String userName = input.next();
-            input.nextLine();
-            try {
-               List<Publishers> publisher = this.entityManager.createNamedQuery("ReturnPublisher",
-                       Publishers.class).setParameter(1, userName).getResultList();
-               if (publisher.size() == 0) {
-                  System.out.println("Sorry, that name doesn't exist in our tables. Please input one of the names displayed.");
-               }
-               else {
-                  System.out.println("Publisher has been successfully deleted.");
-                  this.entityManager.remove(entityManager.find(Publishers.class, userName));
-                  userChoice = true;
-               }
-            }
-            catch (Exception e) {
-               System.out.println("It seems like you entered an invalid name of a publisher. Please input the correct name from the list we provided..");
-            }
-         }
-      }
-      else{
-         System.out.println("Sorry, but we don't have any publishers stored in our database. Add new publishers to remove some.");
-      }
-   }
 
    /**
     * Create and persist a list of objects to the database.

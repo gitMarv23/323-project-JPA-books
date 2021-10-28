@@ -1,41 +1,36 @@
 package csulb.cecs323.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.NamedNativeQuery;
+import javax.persistence.*;
 
 @Entity
+@NamedNativeQuery(
+        name="ReturnAuthor",
+        query = "SELECT * " +
+                "FROM   AUTHORING_ENTITIES " +
+                "WHERE  EMAIL = ? ",
+        resultClass = AuthoringEntities.class
+)
 @NamedNativeQuery(
         name = "ReturnAllAuthors",
         query = "Select *" +
                 "FROM AUTHORING_ENTITIES",
         resultClass = AuthoringEntities.class
 )
-public class AuthoringEntities {
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "AuthoringEntityType", discriminatorType = DiscriminatorType.STRING)
+public abstract class AuthoringEntities {
 
     @Id
     @Column(nullable = false, length = 30)
     private String email;
 
-    @Column(nullable = true, length = 31 )
-    private String entityType;
-
     @Column(nullable = false, length = 80 )
     private String name;
 
-    @Column(nullable = true, length = 80 )
-    private String headWriter;
 
-    @Column(nullable = true )
-    private int yearFormed;
-
-    public AuthoringEntities(String email, String entityType, String name, String headWriter, int yearFormed){
+    public AuthoringEntities(String email, String name){
         this.email = email;
-        this.entityType = entityType;
         this.name = name;
-        this.headWriter = headWriter;
-        this.yearFormed = yearFormed;
 
     }
 
@@ -45,7 +40,6 @@ public class AuthoringEntities {
 
     @Override
     public String toString() {
-        return "Authoring Entities - " + "Email: " + this.email + "   Author Type: " + this.entityType
-                + "   Name: " + this.name + "   Head Writer: " + this.headWriter + "   Year Formed: " + this.yearFormed;
+        return "Authoring Entities - " + "Email: " + this.email + "   Name: " + this.name;
     }
 }
