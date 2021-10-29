@@ -54,21 +54,19 @@ public class Library {
    private static final Logger LOGGER = Logger.getLogger(Library.class.getName());
 
    /**
-    * The constructor for the CarClub class.  All that it does is stash the provided EntityManager
+    * The constructor for the Library class.  All that it does is stash the provided EntityManager
     * for use later in the application.
     * @param manager    The EntityManager that we will use.
     */
-   public Library(EntityManager manager) {
-      this.entityManager = manager;
-   }
+   public Library(EntityManager manager) { this.entityManager = manager; }
 
    public static void main(String[] args) {
       LOGGER.fine("Creating EntityManagerFactory and EntityManager");
       EntityManagerFactory factory = Persistence.createEntityManagerFactory("Library");
       EntityManager manager = factory.createEntityManager();
-      // Create an instance of CarClub and store our new EntityManager as an instance variable.
-      Library library = new Library(manager);
 
+      // Create an instance of Library and store our new EntityManager as an instance variable.
+      Library library = new Library(manager);
 
       EntityTransaction tx = manager.getTransaction();
 
@@ -108,7 +106,6 @@ public class Library {
       System.out.println("Completed Satisfactorily");
 
       LOGGER.fine("End of Transaction");
-
 
    } // End of the main method
 

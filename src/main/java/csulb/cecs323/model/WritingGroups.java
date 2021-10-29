@@ -2,7 +2,7 @@ package csulb.cecs323.model;
 
 import javax.persistence.*;
 import java.util.List;
-
+@Entity
 @DiscriminatorValue("Writing Group")
 public class WritingGroups extends AuthoringEntities{
 
@@ -13,7 +13,7 @@ public class WritingGroups extends AuthoringEntities{
 
     private int yearFormed;
 
-    public WritingGroups(){
+    public WritingGroups() {
 
     }
 

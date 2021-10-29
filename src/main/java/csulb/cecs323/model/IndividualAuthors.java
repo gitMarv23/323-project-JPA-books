@@ -12,10 +12,12 @@ public class IndividualAuthors extends  AuthoringEntities{
     /*@ManyToMany(mappedBy = "individualAuthors",
             cascade = {CascadeType.PERSIST,CascadeType.MERGE}
     )
-    private List<AdHocTeams> adHocTeams;
+    private List<AdHocTeams> adHocTeams;*/
 
-    public IndividualAuthors(){}
+    public IndividualAuthors() {
 
+    }
+    /*
     public IndividualAuthors(String name, String email){
         super(name,email);
         this.adHocTeams = new ArrayList<AdHocTeams>();

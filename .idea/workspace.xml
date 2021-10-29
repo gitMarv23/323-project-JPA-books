@@ -6,10 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="marvin wipe and rebuild based on brown's recommendations">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Cars.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Owners.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/auto_body_styles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/AuthoringEntities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/AuthoringEntities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/IndividualAuthors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/IndividualAuthors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/WritingGroups.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/WritingGroups.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/seed-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/seed-data.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,8 +93,10 @@
   </component>
   <component name="RunManager" selected="Application.Library">
     <configuration name="Library" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="csulb.cecs323.app.Library" />
-      <module name="cecs323-jpa-CarClub" />
+      <module name="cecs323-jpa-Library" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="csulb.cecs323.app.*" />
@@ -101,6 +105,9 @@
       </extension>
       <method v="2">
         <option name="Make" enabled="true" />
+        <option name="DisconnectBeforeRunTask">
+          <option name="dataSourceId" value="5cdf7c7e-9c14-46c6-bef3-d1962fffd878" />
+        </option>
       </method>
     </configuration>
     <configuration name="Books.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
@@ -113,17 +120,23 @@
         </option>
       </method>
     </configuration>
+    <configuration name="seed-data.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/src/main/resources/sql/seed-data.sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.Library" />
       <item itemvalue="Database Script.Books.sql" />
+      <item itemvalue="Database Script.seed-data.sql" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Library" />
+        <item itemvalue="Database Script.seed-data.sql" />
         <item itemvalue="Database Script.Books.sql" />
         <item itemvalue="Database Script.Books.sql" />
         <item itemvalue="Application.Library" />
-        <item itemvalue="Database Script.Books.sql" />
       </list>
     </recent_temporary>
   </component>
@@ -143,7 +156,8 @@
       <workItem from="1634547155349" duration="160000" />
       <workItem from="1634577526978" duration="6436000" />
       <workItem from="1634602944336" duration="373000" />
-      <workItem from="1635467439978" duration="531000" />
+      <workItem from="1635467439978" duration="6053000" />
+      <workItem from="1635476189948" duration="2429000" />
     </task>
     <task id="LOCAL-00001" summary="jpa mini hw template">
       <created>1634443331775</created>
