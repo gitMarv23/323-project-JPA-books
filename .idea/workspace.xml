@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="marvin wipe and rebuild based on brown's recommendations" />
+    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="marvin wipe and rebuild based on brown's recommendations">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Cars.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Owners.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/auto_body_styles.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,7 +92,7 @@
   <component name="RunManager" selected="Application.Library">
     <configuration name="Library" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="csulb.cecs323.app.Library" />
-      <module name="cecs323-jpa-Library" />
+      <module name="cecs323-jpa-CarClub" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="csulb.cecs323.app.*" />
@@ -113,8 +119,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Database Script.Books.sql" />
         <item itemvalue="Application.Library" />
+        <item itemvalue="Database Script.Books.sql" />
         <item itemvalue="Database Script.Books.sql" />
         <item itemvalue="Application.Library" />
         <item itemvalue="Database Script.Books.sql" />
@@ -137,6 +143,7 @@
       <workItem from="1634547155349" duration="160000" />
       <workItem from="1634577526978" duration="6436000" />
       <workItem from="1634602944336" duration="373000" />
+      <workItem from="1635467439978" duration="531000" />
     </task>
     <task id="LOCAL-00001" summary="jpa mini hw template">
       <created>1634443331775</created>
@@ -159,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634546782136</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="marvin wipe and rebuild based on brown's recommendations">
+      <created>1635399364037</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1635399364037</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,7 +184,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="Marv" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

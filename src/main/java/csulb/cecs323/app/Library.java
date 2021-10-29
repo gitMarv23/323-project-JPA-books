@@ -350,24 +350,4 @@ public class Library {
       }
    } // End of createEntity member method
 
-   /**
-    * Think of this as a simple map from a String to an instance of auto_body_styles that has the
-    * same name, as the string that you pass in.  To create a new Cars instance, you need to pass
-    * in an instance of auto_body_styles to satisfy the foreign key constraint, not just a string
-    * representing the name of the style.
-    * @param name       The name of the autobody style that you are looking for.
-    * @return           The auto_body_styles instance corresponding to that style name.
-    */
-   public auto_body_styles getStyle (String name) {
-      // Run the native query that we defined in the auto_body_styles entity to find the right style.
-      List<auto_body_styles> styles = this.entityManager.createNamedQuery("ReturnAutoBodyStyle",
-              auto_body_styles.class).setParameter(1, name).getResultList();
-      if (styles.size() == 0) {
-         // Invalid style name passed in.
-         return null;
-      } else {
-         // Return the style object that they asked for.
-         return styles.get(0);
-      }
-   }// End of the getStyle method
-} // End of CarClub class
+} // End of Library class
