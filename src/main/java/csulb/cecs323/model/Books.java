@@ -3,7 +3,6 @@ package csulb.cecs323.model;
 import javax.persistence.*;
 import java.util.List;
 
-@Entity
 @NamedNativeQuery(
         name="ReturnBook",
         query = "SELECT * " +
@@ -17,16 +16,17 @@ import java.util.List;
                 "FROM   BOOKS ",
         resultClass = Books.class
 )
+@Entity
 public class Books {
 
     @Id
-    @Column(nullable = false, length = 17)
+    @Column(nullable = false, name = "isbn", length = 17)
     private String ISBN;
 
-    @Column(nullable = false, length = 80)
+    @Column(nullable = false, name = "book_title", length = 80)
     private String title;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name = "year_published")
     private int yearPublished;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -34,12 +34,13 @@ public class Books {
     private AuthoringEntities authoringName;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "name", nullable = false, referencedColumnName = "name")
+    @JoinColumn(name = "publisher_name", nullable = false, referencedColumnName = "name")
     private Publishers publisherName;
 
     public Books(){
 
     }
+
     public Books(String ISBN, String title, int yearPublished,Publishers publisherName ,  AuthoringEntities authoringName){
         this.ISBN = ISBN;
         this.title = title;

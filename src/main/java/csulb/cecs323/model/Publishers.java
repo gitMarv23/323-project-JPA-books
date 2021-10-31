@@ -7,7 +7,6 @@ import java.util.List;
 @Table(name = "Publishers", uniqueConstraints = {
         @UniqueConstraint(name = "uc_publishers_email", columnNames = {"email", "phoneNumber"})
 })
-@Entity
 @NamedNativeQuery(
         name="ReturnPublisher",
         query = "SELECT * " +
@@ -21,19 +20,21 @@ import java.util.List;
                 "FROM   PUBLISHERS ",
         resultClass = Publishers.class
 )
+@Entity
 public class Publishers {
     @Id
-    @Column(nullable = false, length = 80)
+    @Column(nullable = false, name = "publisher_name", length = 80)
     private String name;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "publisherName")
-    private List<Books> books;
+    @Column(nullable = false, name = "phone", length = 24)
+    private String phone;
 
-    @Column(nullable = false, length = 80)
+    @Column(nullable = false, name = "email", length = 80)
     private String email;
 
-    @Column(nullable = false, length = 24)
-    private String phone;
+    // one to many reevaluation since relation scheme changed with publisher_name pk to foreign_key in books
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "publisherName")
+    private List<Books> books;
 
     public Publishers(String name, String email, String phone){
         this.name = name;
