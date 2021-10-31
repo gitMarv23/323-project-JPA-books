@@ -31,7 +31,7 @@ public class Books {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "AuthoringEntityType", nullable = false, referencedColumnName = "AuthoringEntityType")
-    private AuthoringEntities authoringName;
+    private Authoring_Entities authoringName;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "publisher_name", nullable = false, referencedColumnName = "name")
@@ -41,7 +41,7 @@ public class Books {
 
     }
 
-    public Books(String ISBN, String title, int yearPublished,Publishers publisherName ,  AuthoringEntities authoringName){
+    public Books(String ISBN, String title, int yearPublished,Publishers publisherName ,  Authoring_Entities authoringName){
         this.ISBN = ISBN;
         this.title = title;
         this.yearPublished = yearPublished;

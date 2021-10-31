@@ -9,20 +9,20 @@ import javax.persistence.*;
             query = "SELECT * " +
                     "FROM   AUTHORING_ENTITIES " +
                     "WHERE  EMAIL = ? ",
-            resultClass = AuthoringEntities.class
+            resultClass = Authoring_Entities.class
     ),
     @NamedNativeQuery(
             name = "ReturnAllAuthors",
-            query = "Select *" +
+            query = "Select * " +
                     "FROM AUTHORING_ENTITIES",
-            resultClass = AuthoringEntities.class
+            resultClass = Authoring_Entities.class
     )
 })
 
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "AuthoringEntityType", discriminatorType = DiscriminatorType.STRING)
+@DiscriminatorColumn(name = "Authoring_Entity_Type", discriminatorType = DiscriminatorType.STRING)
 
-public abstract class AuthoringEntities {
+public abstract class Authoring_Entities {
 
     @Id
     @Column(nullable = false, length = 30)
@@ -31,11 +31,12 @@ public abstract class AuthoringEntities {
     @Column(nullable = false, length = 80 )
     private String name;
 
-    public AuthoringEntities() {
+
+    public Authoring_Entities() {
 
     }
 
-    public AuthoringEntities(String email, String name){
+    public Authoring_Entities(String email, String name){
         this.email = email;
         this.name = name;
     }

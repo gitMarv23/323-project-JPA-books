@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @DiscriminatorValue("AD Hoc Teams")
-public class AdHocTeams extends AuthoringEntities{
+public class AdHocTeams extends Authoring_Entities{
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(
             name = "ad_hoc_teams_member",

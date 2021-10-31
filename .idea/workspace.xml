@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="marvin wipe and rebuild based on brown's recommendations">
+    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="jpa mini hw template">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/AdHocTeams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/AdHocTeams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/AuthoringEntities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Authoring_Entities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Books.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Books.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/IndividualAuthors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/IndividualAuthors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Publishers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Publishers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/WritingGroups.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/WritingGroups.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/seed-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/seed-data.sql" afterDir="false" />
+    </list>
+    <list id="e50bf78b-095a-4b50-8f4b-1bb291197f1a" name="Changes by marvin" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +40,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Lawrence" />
+        <entry key="$PROJECT_DIR$" value="Marv" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,6 +56,14 @@
     </option>
     <option name="currentCommit" value="1" />
     <option name="onto" value="22fc89869fc0f11a970c3b2008b9b3b43caaad34" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -63,6 +81,33 @@
       </map>
     </option>
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java">
+      <ranges>
+        <range start1="76" end1="84" start2="76" end2="76" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="85" end1="85" start2="77" end2="85" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="94" end1="94" start2="94" end2="95" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="96" end1="116" start2="97" end2="98" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="117" end1="117" start2="99" end2="105" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="125" end1="125" start2="113" end2="114" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="139" end1="139" start2="128" end2="129" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
+        <range start1="149" end1="149" start2="139" end2="140" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="152" end1="152" start2="143" end2="146" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="158" end1="158" start2="152" end2="155" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="170" end1="171" start2="167" end2="168" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="176" end1="177" start2="173" end2="174" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="215" end1="216" start2="212" end2="248" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="219" end1="222" start2="251" end2="278" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="223" end1="224" start2="279" end2="304" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="230" end1="231" start2="310" end2="311" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="232" end1="233" start2="312" end2="313" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="243" end1="244" start2="323" end2="324" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="246" end1="247" start2="326" end2="327" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="250" end1="251" start2="330" end2="331" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="292" end1="293" start2="372" end2="373" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProjectId" id="1zcB5oovxI8CpaiGFVcvLEWykNc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -79,6 +124,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -91,7 +137,7 @@
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="csulb.cecs323.app.Library" />
-      <module name="cecs323-jpa-Library" />
+      <module name="cecs323-jpa-CarClub" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="csulb.cecs323.app.*" />
@@ -100,9 +146,6 @@
       </extension>
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="DisconnectBeforeRunTask">
-          <option name="dataSourceId" value="5cdf7c7e-9c14-46c6-bef3-d1962fffd878" />
-        </option>
       </method>
     </configuration>
     <configuration name="Books.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
@@ -115,23 +158,12 @@
         </option>
       </method>
     </configuration>
-    <configuration name="seed-data.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="$PROJECT_DIR$/src/main/resources/sql/seed-data.sql" />
-      <script-mode>FILE</script-mode>
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Application.Library" />
-      <item itemvalue="Database Script.Books.sql" />
-      <item itemvalue="Database Script.seed-data.sql" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Library" />
-        <item itemvalue="Database Script.seed-data.sql" />
-        <item itemvalue="Database Script.Books.sql" />
         <item itemvalue="Database Script.Books.sql" />
         <item itemvalue="Application.Library" />
+        <item itemvalue="Database Script.Books.sql" />
       </list>
     </recent_temporary>
   </component>
@@ -151,9 +183,13 @@
       <workItem from="1634547155349" duration="160000" />
       <workItem from="1634577526978" duration="6436000" />
       <workItem from="1634602944336" duration="373000" />
-      <workItem from="1635467439978" duration="6053000" />
-      <workItem from="1635476189948" duration="2579000" />
-      <workItem from="1635706195306" duration="6903000" />
+      <workItem from="1635119608392" duration="4164000" />
+      <workItem from="1635124043277" duration="2269000" />
+      <workItem from="1635291780167" duration="4311000" />
+      <workItem from="1635298849481" duration="843000" />
+      <workItem from="1635365634899" duration="1988000" />
+      <workItem from="1635390855222" duration="1414000" />
+      <workItem from="1635392308124" duration="5489000" />
     </task>
     <task id="LOCAL-00001" summary="jpa mini hw template">
       <created>1634443331775</created>
@@ -176,14 +212,7 @@
       <option name="project" value="LOCAL" />
       <updated>1634546782136</updated>
     </task>
-    <task id="LOCAL-00004" summary="marvin wipe and rebuild based on brown's recommendations">
-      <created>1635399364037</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1635399364037</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,19 +223,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="Marv" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>

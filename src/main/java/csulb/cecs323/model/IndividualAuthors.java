@@ -7,19 +7,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 @DiscriminatorValue("Individual Authors")
-public class IndividualAuthors extends  AuthoringEntities{
+public class IndividualAuthors extends  Authoring_Entities{
 
-    /*@ManyToMany(mappedBy = "individualAuthors",
+    // support hour fix
+    @ManyToMany(mappedBy = "individualAuthors",
             cascade = {CascadeType.PERSIST,CascadeType.MERGE}
     )
-    private List<AdHocTeams> adHocTeams;*/
+    private List<AdHocTeams> adHocTeams;
 
     public IndividualAuthors() {
 
     }
-    /*
-    public IndividualAuthors(String name, String email){
-        super(name,email);
+
+    public IndividualAuthors(String email, String name){
+        super(email,name);
         this.adHocTeams = new ArrayList<AdHocTeams>();
-    }*/
+    }
 }

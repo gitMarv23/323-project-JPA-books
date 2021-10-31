@@ -11,7 +11,7 @@ import java.util.List;
         name="ReturnPublisher",
         query = "SELECT * " +
                 "FROM   PUBLISHERS " +
-                "WHERE  name = ? ",
+                "WHERE  PUBLISHER_NAME = ? ",
         resultClass = Publishers.class
 )
 @NamedNativeQuery(
@@ -32,6 +32,30 @@ public class Publishers {
     @Column(nullable = false, name = "email", length = 80)
     private String email;
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
     // one to many reevaluation since relation scheme changed with publisher_name pk to foreign_key in books
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "publisherName")
     private List<Books> books;
@@ -45,6 +69,9 @@ public class Publishers {
     public Publishers(){
 
     }
+
+
+
 
     @Override
     public String toString(){

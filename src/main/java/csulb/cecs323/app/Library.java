@@ -74,15 +74,15 @@ public class Library {
 
       System.out.println("Welcome to JPA Books!");
       boolean userLeaves = false;
-      System.out.println("Please select what you want to do today. Make absolutely sure that you enter '1', and nothing more. " +
-              "Otherwise, you'll exit the entire program.\n" +
-              "1. Add New Object\n" +
-              "2. List all the Information about a Specific Object\n" +
-              "3. Delete a Book\n" +
-              "4. Update a Book\n" +
-              "5. List primary keys of all rows\n" +
-              "Anything Else: Exit Program");
       while(!userLeaves) {
+         System.out.println("Please select what you want to do today. Make absolutely sure that you enter '1', and nothing more. " +
+                 "Otherwise, you'll exit the entire program.\n" +
+                 "1. Add New Object\n" +
+                 "2. List all the Information about a Specific Object\n" +
+                 "3. Delete a Book\n" +
+                 "4. Update a Book\n" +
+                 "5. List primary keys of all rows\n" +
+                 "Anything Else: Exit Program");
          String userChoice = input.next();
          input.nextLine();
          switch (userChoice){
@@ -92,28 +92,16 @@ public class Library {
                        "2. Add a new Publisher\n" +
                        "3. Add a new Book");
                userChoice = input.next();
+               input.nextLine();
                switch (userChoice){
                   case "1":
-                     System.out.println("Add new Authoring Entity Instance\n" +
-                             "1. Writing Group\n" +
-                             "2. Individual Author\n" +
-                             "3. Ad Hoc Team\n" +
-                             "4. Add an Individual Author to an Existing Ad Hoc Team");
-                     userChoice = input.next();
-                     switch (userChoice){
-                        case "1":
-                           System.out.println("Add new Writing Group");
-                           break;
-                        case "2":
-                           System.out.println("Add new Individual Author");
-                           break;
-                        case "3":
-                           System.out.println("Add new Ad Hoc Team");
-                           break;
-                        case "4":
-                           System.out.println("Add new Author to Existing Ad Hoc Team");
-                           break;
-                     }
+                     library.authoringMenu();
+                     break;
+                  case "2":
+                     library.addPublisher();
+                     break;
+                  case "3":
+                     library.addBook();
                      break;
                }
                break;
@@ -123,6 +111,7 @@ public class Library {
                        "2. Book\n" +
                        "3. Writing Group\n");
                userChoice = input.next();
+               input.nextLine();
                switch (userChoice){
                   case "1":
                      System.out.println("List Publisher Information");
@@ -147,15 +136,22 @@ public class Library {
                        "2. Books Keys\n" +
                        "3. Authoring Entities Keys (Includes Authoring Entity Type)");
                userChoice = input.next();
+               input.nextLine();
                switch (userChoice){
                   case "1":
                      System.out.println("List Publisher Keys");
+                     for(Publishers publisherPrimary : library.entityManager.createNamedQuery("ReturnAllPublisher", Publishers.class).getResultList()){
+                        System.out.println(publisherPrimary.getName());
+                     }
                      break;
                   case "2":
                      System.out.println("List Books Keys");
                      break;
                   case "3":
                      System.out.println("List Authoring Entities Keys");
+                     for(Authoring_Entities Authoring_Entities: library.entityManager.createNamedQuery("ReturnAllAuthors", Authoring_Entities.class).getResultList()){
+                        System.out.println(Authoring_Entities.toString());
+                     }
                      break;
                }
                break;
@@ -168,13 +164,13 @@ public class Library {
             break;
             case "2": library.addPublisher();
             break;
-            case "3": if(library.displayAllAuthoringEntities() && library.displayAllPublishers()) {library.displayAllBooks();}
+            case "3": if(library.displayAllAuthoring_Entities() && library.displayAllPublishers()) {library.displayAllBooks();}
             break;
             case "4": library.addBook();
             break;
             case "5": library.deleteBook();
             break;
-            case "7": if(library.displayAllAuthoringEntities()) {library.displayAllAuthoringEntities();}
+            case "7": if(library.displayAllAuthoring_Entities()) {library.displayAllAuthoring_Entities();}
             break;
             case "8": library.authoringMenu();*/
          }
@@ -213,24 +209,107 @@ public class Library {
    }
 
    public void addWritingGroup(){
-
+      boolean nameCheck = false;
+      while(!nameCheck){
+         System.out.println("What is the name of the head writer?");
+         String userHeadName = input.next();
+         input.nextLine();
+         try{
+            List<Authoring_Entities> writingGroups = this.entityManager.createNamedQuery("ReturnWriting",
+                    Authoring_Entities.class).setParameter(1, userHeadName).getResultList();
+            if (writingGroups.isEmpty()) {
+               nameCheck= true;
+               System.out.println("What is the email of " + userHeadName + "?");
+               String userEmail = input.next();
+               input.nextLine();
+               System.out.println("What is the name of the authoring group?");
+               String userName = input.next();
+               input.nextLine();
+               System.out.println("What is the year that the group was formed?");
+               try {
+                  int userYear = input.nextInt();
+                  input.nextLine();
+                  ArrayList<WritingGroups> userWritingGroup = new ArrayList<WritingGroups>();
+                  userWritingGroup.add(new WritingGroups(userEmail,userName,userHeadName,userYear));
+                  this.createEntity(userWritingGroup);
+               }
+               catch (Exception e){
+                  System.out.println("Sorry, you entered in a bad entry for year. please try again.");
+               }
+            } // end of if statement
+            else{
+               System.out.println("Sorry, there already is a publisher under that name.");
+            }
+         }
+         catch(Exception e){
+            System.out.println("Sorry, someone by that name already exists.");
+         }
+      }
    }
 
    public void addIndividualAuthor(){
-
+      boolean nameCheck = false;
+      while(!nameCheck) {
+         System.out.println("What is the name of the new author?");
+         String userName = input.next();
+         input.nextLine();
+         try{
+            List<IndividualAuthors> individualAuthors = this.entityManager.createNamedQuery("ReturnPublisher",
+                    IndividualAuthors.class).setParameter(1, userName).getResultList();
+            if (individualAuthors.size() == 0) {
+               nameCheck= true;
+               System.out.println("What is the email of " + userName + "?");
+               String userEmail = input.next();
+               input.nextLine();
+               ArrayList<IndividualAuthors> userAuthor = new ArrayList<IndividualAuthors>();
+               userAuthor.add(new IndividualAuthors(userName,userEmail));
+               this.createEntity(userAuthor);
+            } // end of if statement
+            else{
+               System.out.println("Sorry, there already is a publisher under that name.");
+            }
+         }
+         catch(Exception e){
+            System.out.println("Sorry, someone by that name already exists.");
+         }
+      }
    }
-
+   // needs to be completed
    public void addAdHocTeam(){
-
+      boolean nameCheck = false;
+      while(!nameCheck) {
+         System.out.println("What is the name of the new author?");
+         String userName = input.next();
+         input.nextLine();
+         try{
+            List<IndividualAuthors> individualAuthors = this.entityManager.createNamedQuery("ReturnPublisher",
+                    IndividualAuthors.class).setParameter(1, userName).getResultList();
+            if (individualAuthors.size() == 0) {
+               nameCheck= true;
+               System.out.println("What is the email of " + userName + "?");
+               String userEmail = input.next();
+               input.nextLine();
+               ArrayList<IndividualAuthors> userAuthor = new ArrayList<IndividualAuthors>();
+               userAuthor.add(new IndividualAuthors(userName,userEmail));
+               this.createEntity(userAuthor);
+            } // end of if statement
+            else{
+               System.out.println("Sorry, there already is a publisher under that name.");
+            }
+         }
+         catch(Exception e){
+            System.out.println("Sorry, someone by that name already exists.");
+         }
+      }
    }
 
    public void addAuthorToAdHoc(){
 
    }
 
-   public boolean displayAllAuthoringEntities(){
+   public boolean displayAllAuthoring_Entities(){
       try {
-         for (AuthoringEntities author : this.entityManager.createNamedQuery("ReturnAllAuthors", AuthoringEntities.class).getResultList()) {
+         for (Authoring_Entities author : this.entityManager.createNamedQuery("ReturnAllAuthors", Authoring_Entities.class).getResultList()) {
             System.out.println(author.toString());
          }
          return true;
@@ -241,14 +320,14 @@ public class Library {
       }
    }
 
-   public AuthoringEntities pickAuthoringEntity(){
+   public Authoring_Entities pickAuthoringEntity(){
       boolean userChoice = false;
       while(!userChoice){
-         this.displayAllAuthoringEntities();
+         this.displayAllAuthoring_Entities();
          System.out.println("Please enter the email of the author you want to pick.");
          String userAuthor = input.next();
          input.nextLine();
-         List<AuthoringEntities> author = this.entityManager.createNamedQuery("ReturnAuthor",AuthoringEntities.class).setParameter(1,userAuthor).getResultList();
+         List<Authoring_Entities> author = this.entityManager.createNamedQuery("ReturnAuthor",Authoring_Entities.class).setParameter(1,userAuthor).getResultList();
          if(author.size()==0){
             System.out.println("Sorry, you entered an invalid publisher name.");
          }
@@ -290,7 +369,7 @@ public class Library {
                int userYear = input.nextInt();
                input.nextLine();
                Publishers userPublisher = this.pickPublisher();
-               AuthoringEntities userAuthor = this.pickAuthoringEntity();
+               Authoring_Entities userAuthor = this.pickAuthoringEntity();
                ArrayList<Books> userBook = new ArrayList<Books>();
                userBook.add(new Books(userISBN,userTitle,userYear, userPublisher,userAuthor));
                this.createEntity(userBook);
