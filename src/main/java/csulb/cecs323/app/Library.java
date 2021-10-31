@@ -74,16 +74,97 @@ public class Library {
 
       System.out.println("Welcome to JPA Books!");
       boolean userLeaves = false;
+      System.out.println("Please select what you want to do today. Make absolutely sure that you enter '1', and nothing more. " +
+              "Otherwise, you'll exit the entire program.\n" +
+              "1. Add New Object\n" +
+              "2. List all the Information about a Specific Object\n" +
+              "3. Delete a Book\n" +
+              "4. Update a Book\n" +
+              "5. List primary keys of all rows\n" +
+              "Anything Else: Exit Program");
       while(!userLeaves) {
-         System.out.println("Please select what you want to do today. Make absolutely sure that you enter '1', and nothing more. " +
-                 "Otherwise, you'll exit the entire program.\n" +
-                 "1. View All Publishers\n2. Add A New Publisher" +
-                 "\n3. View all Books\n4. Add a New Book\n5. Delete a Book\n6. Update a Book" +
-                 "\n7. View all Authors\n8. Add A New Author\nAnything Else: Exit Program");
          String userChoice = input.next();
          input.nextLine();
          switch (userChoice){
-            case "1": library.displayAllPublishers();
+            case "1":
+               System.out.println("Add New Object\n" +
+                       "1. Authoring Entity Instance\n" +
+                       "2. Add a new Publisher\n" +
+                       "3. Add a new Book");
+               userChoice = input.next();
+               switch (userChoice){
+                  case "1":
+                     System.out.println("Add new Authoring Entity Instance\n" +
+                             "1. Writing Group\n" +
+                             "2. Individual Author\n" +
+                             "3. Ad Hoc Team\n" +
+                             "4. Add an Individual Author to an Existing Ad Hoc Team");
+                     userChoice = input.next();
+                     switch (userChoice){
+                        case "1":
+                           System.out.println("Add new Writing Group");
+                           break;
+                        case "2":
+                           System.out.println("Add new Individual Author");
+                           break;
+                        case "3":
+                           System.out.println("Add new Ad Hoc Team");
+                           break;
+                        case "4":
+                           System.out.println("Add new Author to Existing Ad Hoc Team");
+                           break;
+                     }
+                     break;
+               }
+               break;
+            case "2":
+               System.out.println("List all the Information about a Specific Object\n" +
+                       "1. Publisher\n" +
+                       "2. Book\n" +
+                       "3. Writing Group\n");
+               userChoice = input.next();
+               switch (userChoice){
+                  case "1":
+                     System.out.println("List Publisher Information");
+                     break;
+                  case "2":
+                     System.out.println("List Book information");
+                     break;
+                  case "3":
+                     System.out.println("List Writing Group Information");
+                     break;
+               }
+               break;
+            case "3":
+               System.out.println("Delete a Book");
+               break;
+            case "4":
+               System.out.println("Update a Book");
+               break;
+            case "5":
+               System.out.println("List primary keys of all rows\n" +
+                       "1. Publisher Keys\n" +
+                       "2. Books Keys\n" +
+                       "3. Authoring Entities Keys (Includes Authoring Entity Type)");
+               userChoice = input.next();
+               switch (userChoice){
+                  case "1":
+                     System.out.println("List Publisher Keys");
+                     break;
+                  case "2":
+                     System.out.println("List Books Keys");
+                     break;
+                  case "3":
+                     System.out.println("List Authoring Entities Keys");
+                     break;
+               }
+               break;
+
+            default:userLeaves = true;
+               break;
+
+            // old code
+            /*library.displayAllPublishers();
             break;
             case "2": library.addPublisher();
             break;
@@ -95,9 +176,7 @@ public class Library {
             break;
             case "7": if(library.displayAllAuthoringEntities()) {library.displayAllAuthoringEntities();}
             break;
-            case "8": library.authoringMenu();
-            default:userLeaves = true;
-            break;
+            case "8": library.authoringMenu();*/
          }
       }
 
