@@ -29,8 +29,8 @@ public class Books {
     @Column(nullable = false, name = "year_published")
     private int yearPublished;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "AuthoringEntityType", nullable = false, referencedColumnName = "AuthoringEntityType")
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "Authoring_Entity_Type", nullable = false, referencedColumnName = "AUTHORING_ENTITY_TYPE")
     private Authoring_Entities authoringName;
 
     @ManyToOne(fetch = FetchType.LAZY)

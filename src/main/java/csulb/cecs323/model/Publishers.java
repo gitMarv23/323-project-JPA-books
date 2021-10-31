@@ -32,6 +32,7 @@ public class Publishers {
     @Column(nullable = false, name = "email", length = 80)
     private String email;
 
+
     public String getName() {
         return name;
     }
@@ -57,7 +58,7 @@ public class Publishers {
     }
 
     // one to many reevaluation since relation scheme changed with publisher_name pk to foreign_key in books
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "publisherName")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "publisherName", cascade = {CascadeType.PERSIST,CascadeType.MERGE})
     private List<Books> books;
 
     public Publishers(String name, String email, String phone){

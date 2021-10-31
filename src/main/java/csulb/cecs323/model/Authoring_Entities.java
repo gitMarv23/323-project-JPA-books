@@ -1,6 +1,7 @@
 package csulb.cecs323.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @NamedNativeQueries({
@@ -30,6 +31,9 @@ public abstract class Authoring_Entities {
 
     @Column(nullable = false, length = 80 )
     private String name;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "authoringName", cascade = CascadeType.PERSIST)
+    private List<Books> books;
 
 
     public Authoring_Entities() {

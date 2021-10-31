@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="jpa mini hw template">
+    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="Fixed issues with Authoring_Entities">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/AdHocTeams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/AdHocTeams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/AuthoringEntities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Authoring_Entities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Authoring_Entities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Authoring_Entities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Books.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Books.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/IndividualAuthors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/IndividualAuthors.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Publishers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Publishers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/WritingGroups.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/WritingGroups.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/seed-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/seed-data.sql" afterDir="false" />
     </list>
     <list id="e50bf78b-095a-4b50-8f4b-1bb291197f1a" name="Changes by marvin" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" afterDir="false" />
@@ -80,33 +75,6 @@
         <entry key="JPA Structure" value="false" />
       </map>
     </option>
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java">
-      <ranges>
-        <range start1="76" end1="84" start2="76" end2="76" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
-        <range start1="85" end1="85" start2="77" end2="85" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
-        <range start1="94" end1="94" start2="94" end2="95" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
-        <range start1="96" end1="116" start2="97" end2="98" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
-        <range start1="117" end1="117" start2="99" end2="105" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
-        <range start1="125" end1="125" start2="113" end2="114" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
-        <range start1="139" end1="139" start2="128" end2="129" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
-        <range start1="149" end1="149" start2="139" end2="140" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
-        <range start1="152" end1="152" start2="143" end2="146" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
-        <range start1="158" end1="158" start2="152" end2="155" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
-        <range start1="170" end1="171" start2="167" end2="168" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
-        <range start1="176" end1="177" start2="173" end2="174" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
-        <range start1="215" end1="216" start2="212" end2="248" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
-        <range start1="219" end1="222" start2="251" end2="278" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
-        <range start1="223" end1="224" start2="279" end2="304" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
-        <range start1="230" end1="231" start2="310" end2="311" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
-        <range start1="232" end1="233" start2="312" end2="313" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
-        <range start1="243" end1="244" start2="323" end2="324" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
-        <range start1="246" end1="247" start2="326" end2="327" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
-        <range start1="250" end1="251" start2="330" end2="331" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
-        <range start1="292" end1="293" start2="372" end2="373" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectId" id="1zcB5oovxI8CpaiGFVcvLEWykNc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -212,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634546782136</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fixed issues with Authoring_Entities">
+      <created>1635721586577</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1635721586577</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +209,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="jpa mini hw template" />
     <MESSAGE value="marvin wipe and rebuild based on brown's recommendations" />
-    <option name="LAST_COMMIT_MESSAGE" value="marvin wipe and rebuild based on brown's recommendations" />
+    <MESSAGE value="Fixed issues with Authoring_Entities" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed issues with Authoring_Entities" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
