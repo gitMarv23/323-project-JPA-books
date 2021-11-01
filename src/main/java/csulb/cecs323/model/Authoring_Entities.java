@@ -3,7 +3,6 @@ package csulb.cecs323.model;
 import javax.persistence.*;
 import java.util.List;
 
-@Entity
 @NamedNativeQueries({
     @NamedNativeQuery(
             name="ReturnAuthor",
@@ -19,7 +18,7 @@ import java.util.List;
             resultClass = Authoring_Entities.class
     )
 })
-
+@Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "Authoring_Entity_Type", discriminatorType = DiscriminatorType.STRING)
 
