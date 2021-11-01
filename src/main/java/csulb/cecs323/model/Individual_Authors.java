@@ -1,31 +1,43 @@
 package csulb.cecs323.model;
 
+/**
+ * Impors necessary for current project
+ */
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
- * This input is used for
- * */
+ * Class to represent a single author to be entered into the database.
+ * Relation scheme Foreign Key connection via author's email address
+ */
 @Entity
 @DiscriminatorValue("Individual Authors")
 public class Individual_Authors extends  Authoring_Entities{
 
-    // support hour fix
+    /**
+     * List of Ad Hoc Team the Individual Author will belong to.
+     * Relation scheme depicts the email Foreign Key connections
+     */
+    //TODO: support hour fix
     @ManyToMany(mappedBy = "individual_authors",
             cascade = CascadeType.ALL)
     private List<AdHocTeams> adHocTeams;
 
     /**
-     * This input is used for
-     * */
+     * Default constructor where values are originally null,
+     * however, the database cannot contain null values for these attributes.
+     * Thus, overloaded constructor will be used.
+     */
     public Individual_Authors() {
 
     }
 
     /**
-     * This input is used for
-     * */
+     * Overloaded constructor to build an Individual Author with given.
+     * Creates Ad Hoc Teams List to represent team author will be a part of if applicable.
+     * @param email Email Address inputted by the user.
+     * @param name  Individual author name to be inputted by user.
+     */
     public Individual_Authors(String email, String name){
         super(email,name);
         this.adHocTeams = new ArrayList<AdHocTeams>();

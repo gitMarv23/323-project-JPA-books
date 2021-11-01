@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="Library class javadocs ~90%">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/AdHocTeams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/AdHocTeams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Individual_Authors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Individual_Authors.java" afterDir="false" />
     </list>
     <list id="e50bf78b-095a-4b50-8f4b-1bb291197f1a" name="Changes by marvin" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +68,7 @@
       <map>
         <entry key="JPA Inspector" value="false" />
         <entry key="JPA Palette" value="false" />
-        <entry key="JPA Structure" value="true" />
+        <entry key="JPA Structure" value="false" />
       </map>
     </option>
   </component>
@@ -93,7 +94,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager" selected="Application.Library">
     <configuration name="Library" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -218,7 +219,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="Lawrence" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

@@ -1,12 +1,14 @@
 package csulb.cecs323.model;
 
+/**
+ * Imported collections to be used in the AdHocTeams Class
+ */
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * This input is used for
- * */
+ */
 @Entity
 @DiscriminatorValue("AD Hoc Teams")
 public class AdHocTeams extends Authoring_Entities{
