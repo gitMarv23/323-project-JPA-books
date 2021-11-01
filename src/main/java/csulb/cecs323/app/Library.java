@@ -31,6 +31,7 @@ import java.util.logging.Logger;
  * This is for demonstration and educational purposes only.
  * Originally provided by Dr. Alvaro Monge of CSULB, and subsequently modified by Dave Brown.
  */
+//TODO: inner function comments upon functionality completion
 public class Library {
    /**
     * You will likely need the entityManager in a great many functions throughout your application.
@@ -63,6 +64,7 @@ public class Library {
     * Main Library program to run upon execution.
     * Simulates entity relationship model provided by Dave Brown
     */
+   //TODO: functionality check and interface fluidity
    public static void main(String[] args) {
       LOGGER.fine("Creating EntityManagerFactory and EntityManager");
       EntityManagerFactory factory = Persistence.createEntityManagerFactory("Library");
@@ -342,7 +344,11 @@ public class Library {
    } // end of DisplayAllAuthoring_Entities
 
    /**
-    *
+    * Allow user to select an existing Authoring Entity to utilize for other functionalities.
+    * This function will be used in other methods such as addBook.
+    * @return first index from List object containing desired Entity
+    * @return null if an invalid publisher name has been selected
+
     */
    public Authoring_Entities pickAuthoringEntity(){
       boolean userChoice = false;
@@ -362,6 +368,11 @@ public class Library {
       return null;
    } // end of pickAuthoringEntity
 
+   /**
+    * Displays all books in the current database
+    * @return true and all information related to current books in database
+    * @return false if no books found
+    */
    public boolean displayAllBooks(){
       try {
          for (Books book : this.entityManager.createNamedQuery("ReturnAllBooks", Books.class).getResultList()) {
@@ -375,6 +386,10 @@ public class Library {
       }
    } // end of displayAllBooks
 
+   /**
+    * Adds a Book entity to the database utilizing JPA Annotations from associated classes.
+    * Will Prompt user for necessary input prior to executing Native Class Queries and other necessary functionalities
+    */
    public void addBook(){
       boolean bookCheck = false;
       while(!bookCheck) {
@@ -408,6 +423,10 @@ public class Library {
       }
    } // end of addBook
 
+   /**
+    * Deletes a Book entity to the database utilizing JPA Annotations from associated classes.
+    * Will Prompt user for necessary input prior to executing Native Class Queries and other necessary functionalities
+    */
    public void deleteBook(){
       List<Books> booksList = this.entityManager.createNamedQuery("ReturnAllBooks", Books.class).getResultList();
       if(booksList.size()>0) {
@@ -441,10 +460,20 @@ public class Library {
       }
    } // end of deleteBook
 
+   /**
+    * Updates current desired Book entity in the database based on user input.
+    * JPA Annotations from associated classes are then used with persistence module to make database changes.
+    * Will Prompt user for necessary input prior to executing Native Class Queries and other necessary functionalities
+    */
    public void updateBook(){
 
    } // end of updateBook
 
+   /**
+    * Displays all publishers in the current database
+    * @return true if Publishers exist and display current entities
+    * @return false if no Publishers found
+    */
    public boolean displayAllPublishers(){
       try {
          for (Publishers publisher : this.entityManager.createNamedQuery("ReturnAllPublisher", Publishers.class).getResultList()) {
@@ -458,6 +487,11 @@ public class Library {
       }
    } // end of displayAllPublishers
 
+   /**
+    * Allow user to select a publisher from the existing Publishers table in our database
+    * @return Publisher at first index from matched list
+    * @return null with message if no Publisher match found
+    */
    public Publishers pickPublisher(){
       boolean userChoice = false;
       while(!userChoice){
@@ -476,6 +510,10 @@ public class Library {
       return null;
    } // end of pickPublisher
 
+   /**
+    * Adds a Publisher entity to the database utilizing JPA Annotations from associated classes.
+    * Will Prompt user for necessary input prior to executing Native Class Queries and other necessary functionalities
+    */
    public void addPublisher(){
       boolean nameCheck = false;
       while(!nameCheck) {

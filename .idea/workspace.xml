@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="javadoc private vars and Library const fix/clean up">
+    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="Library class javadocs ~90%">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" afterDir="false" />
     </list>
@@ -200,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635776404098</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Library class javadocs ~90%">
+      <created>1635777613340</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1635777613340</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +231,8 @@
     <MESSAGE value="marvin wipe and rebuild based on brown's recommendations" />
     <MESSAGE value="Fixed issues with Authoring_Entities" />
     <MESSAGE value="javadoc private vars and Library const fix/clean up" />
-    <option name="LAST_COMMIT_MESSAGE" value="javadoc private vars and Library const fix/clean up" />
+    <MESSAGE value="Library class javadocs ~90%" />
+    <option name="LAST_COMMIT_MESSAGE" value="Library class javadocs ~90%" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
