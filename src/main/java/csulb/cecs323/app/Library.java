@@ -14,7 +14,7 @@ package csulb.cecs323.app;
 
 /**
  * imports necessary for current project
- * */
+ */
 import csulb.cecs323.model.*;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -41,7 +41,7 @@ public class Library {
 
    /**
     * Default input scanner variable for user input into database
-    * */
+   */
    private static Scanner input = new Scanner(System.in);
 
    /**
@@ -59,6 +59,10 @@ public class Library {
     */
    public Library(EntityManager manager) { this.entityManager = manager; }
 
+   /**
+    * Main Library program to run upon execution.
+    * Simulates entity relationship model provided by Dave Brown
+    */
    public static void main(String[] args) {
       LOGGER.fine("Creating EntityManagerFactory and EntityManager");
       EntityManagerFactory factory = Persistence.createEntityManagerFactory("Library");
@@ -168,6 +172,11 @@ public class Library {
 
    } // End of the main method
 
+   /**
+    * Function to display user menu options to add a new authoring entity instance.
+    * Based on the input the user will be able to add any of the following entities:
+    * Writing Group, Individual Author, Ad Hoc Team, or an Individual Author to an Existing Ad Hoc Team.
+    */
    public void authoringMenu(){
       boolean userLeaves = false;
       while(!userLeaves) {
@@ -194,8 +203,12 @@ public class Library {
                break;
          }
       }
-   }
+   } // end of authoringMenu
 
+   /**
+    * Adds a Writing Group entity to the database utilizing JPA Annotations from associated classes.
+    * Will Prompt user for necessary input prior to executing Native Class Queries and other necessary functionalities
+    */
    public void addWritingGroup(){
       boolean nameCheck = false;
       while(!nameCheck){
@@ -233,8 +246,12 @@ public class Library {
             System.out.println("Sorry, someone by that name already exists.");
          }
       }
-   }
+   } // end of addWritingGroup
 
+   /**
+    * Adds an Individual Author entity to the database utilizing JPA Annotations from associated classes.
+    * Will Prompt user for necessary input prior to executing Native Class Queries and other necessary functionalities
+    */
    public void addIndividualAuthor(){
       boolean nameCheck = false;
       while(!nameCheck) {
@@ -261,8 +278,13 @@ public class Library {
             System.out.println("Sorry, someone by that name already exists.");
          }
       }
-   }
-   // needs to be completed
+   } // end of addIndividualAuthor
+
+   /**
+    * Adds an Ad Hoc Team entity to the database utilizing JPA Annotations from associated classes.
+    * Will Prompt user for necessary input prior to executing Native Class Queries and other necessary functionalities
+    */
+   //TODO: complete function operability
    public void addAdHocTeam(){
       boolean nameCheck = false;
       while(!nameCheck) {
@@ -289,12 +311,23 @@ public class Library {
             System.out.println("Sorry, someone by that name already exists.");
          }
       }
-   }
+   } // end of addHocTeam
 
+   /**
+    * Adds an individual author to an EXISTING Ad Hoc Team entity.
+    * Subsequent to inclusion, the database utilizing JPA Annotations from associated classes is updated.
+    * Will Prompt user for necessary input prior to executing Native Class Queries and other necessary functionalities
+    */
+   //TODO: complete function operability
    public void addAuthorToAdHoc(){
 
-   }
+   } // end of addAuthorToAdHoc
 
+   /**
+    * Displays all Authoring Entities contained in the database
+    * @return true if table contains existing Authoring Entities
+    * @return false with console output message if no Authoring Entities are found
+    * */
    public boolean displayAllAuthoring_Entities(){
       try {
          for (Authoring_Entities author : this.entityManager.createNamedQuery("ReturnAllAuthors", Authoring_Entities.class).getResultList()) {
@@ -306,8 +339,11 @@ public class Library {
          System.out.println("Sorry, you have no existing authors in the database.");
          return false;
       }
-   }
+   } // end of DisplayAllAuthoring_Entities
 
+   /**
+    *
+    */
    public Authoring_Entities pickAuthoringEntity(){
       boolean userChoice = false;
       while(!userChoice){
@@ -324,7 +360,7 @@ public class Library {
          }
       }
       return null;
-   }
+   } // end of pickAuthoringEntity
 
    public boolean displayAllBooks(){
       try {
@@ -337,7 +373,7 @@ public class Library {
          System.out.println("Sorry, you have no existing books in the database.");
          return false;
       }
-   }
+   } // end of displayAllBooks
 
    public void addBook(){
       boolean bookCheck = false;
@@ -370,7 +406,7 @@ public class Library {
             System.out.println("Sorry, someone by that name already exists.");
          }
       }
-   }
+   } // end of addBook
 
    public void deleteBook(){
       List<Books> booksList = this.entityManager.createNamedQuery("ReturnAllBooks", Books.class).getResultList();
@@ -403,11 +439,11 @@ public class Library {
       else{
          System.out.println("Sorry, but we don't have any books stored in our database. Add new books to remove some.");
       }
-   }
+   } // end of deleteBook
 
    public void updateBook(){
 
-   }
+   } // end of updateBook
 
    public boolean displayAllPublishers(){
       try {
@@ -420,7 +456,7 @@ public class Library {
          System.out.println("Sorry, there are no existing publishers inside the database.");
          return false;
       }
-   }
+   } // end of displayAllPublishers
 
    public Publishers pickPublisher(){
       boolean userChoice = false;
@@ -438,7 +474,7 @@ public class Library {
          }
       }
       return null;
-   }
+   } // end of pickPublisher
 
    public void addPublisher(){
       boolean nameCheck = false;
@@ -469,7 +505,7 @@ public class Library {
             System.out.println("Sorry, someone by that name already exists.");
          }
       }
-   }
+   } // end of addPublisher
 
 
    /**
