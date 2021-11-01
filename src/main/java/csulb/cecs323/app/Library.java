@@ -12,9 +12,10 @@
 
 package csulb.cecs323.app;
 
-// Import all the entity classes that we have written for this application.
+/**
+ * imports necessary for current project
+ * */
 import csulb.cecs323.model.*;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
