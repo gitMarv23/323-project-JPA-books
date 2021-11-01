@@ -19,13 +19,14 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
 /**
- * An application to use JPA with some JPA constructs
+ * A simple application to demonstrate how to persist an object in JPA.
  * <p>
  * This is for demonstration and educational purposes only.
  * </p>
@@ -41,9 +42,6 @@ public class Library {
     */
    private EntityManager entityManager;
 
-   /**
-   * This variable is used to extract the user's input
-   * */
    private static Scanner input = new Scanner(System.in);
 
    /**
@@ -73,11 +71,10 @@ public class Library {
       EntityTransaction tx = manager.getTransaction();
 
       tx.begin();
+
       System.out.println("Welcome to JPA Books!");
-      //Checks to make sure the user wants to leave, and if not, we keep them in the program.
       boolean userLeaves = false;
       while(!userLeaves) {
-         //Just menu display
          System.out.println("Please select what you want to do today. Make absolutely sure that you enter '1', and nothing more. " +
                  "Otherwise, you'll exit the entire program.\n" +
                  "1. Add New Object\n" +
@@ -86,11 +83,9 @@ public class Library {
                  "4. Update a Book\n" +
                  "5. List primary keys of all rows\n" +
                  "Anything Else: Exit Program");
-         //Gets the user's choice for the first menu
          String userChoice = input.next();
          input.nextLine();
          switch (userChoice){
-            //if the user selects to add a new object, we go here
             case "1":
                System.out.println("Add New Object\n" +
                        "1. Authoring Entity Instance\n" +
@@ -99,19 +94,17 @@ public class Library {
                userChoice = input.next();
                input.nextLine();
                switch (userChoice){
-                  case "1": //takes us to an authoring menu page to select what author type we intend to add
+                  case "1":
                      library.authoringMenu();
                      break;
-                  case "2": //takes us to the add publisher page
+                  case "2":
                      library.addPublisher();
                      break;
-                  case "3": // takes us to the book page
-                     //TODO: Condition check if there are authors and publishers
+                  case "3":
                      library.addBook();
                      break;
-               }//end of adding new objects switch case
+               }
                break;
-            //if the user wants to see all of the objects of a specific object
             case "2":
                System.out.println("List all the Information about a Specific Object\n" +
                        "1. Publisher\n" +
@@ -120,7 +113,6 @@ public class Library {
                userChoice = input.next();
                input.nextLine();
                switch (userChoice){
-                  //TODO: Display all information using toString
                   case "1":
                      System.out.println("List Publisher Information");
                      break;
@@ -130,48 +122,38 @@ public class Library {
                   case "3":
                      System.out.println("List Writing Group Information");
                      break;
-               }//end of listing information switch case
+               }
                break;
-            //if the user wants to delete a book, go here
             case "3":
                System.out.println("Delete a Book");
-               library.deleteBook();
                break;
-            //TODO: Update a book function
-            //if the user wants to update a book, go here
             case "4":
                System.out.println("Update a Book");
                break;
-            //if the user wants the primary values of objects
             case "5":
-               System.out.println("List primary values of all rows\n" +
+               System.out.println("List primary keys of all rows\n" +
                        "1. Publisher Keys\n" +
                        "2. Books Keys\n" +
                        "3. Authoring Entities Keys (Includes Authoring Entity Type)");
                userChoice = input.next();
                input.nextLine();
                switch (userChoice){
-                  //display if the user wants the publishers information
                   case "1":
                      System.out.println("List Publisher Keys");
                      for(Publishers publisherPrimary : library.entityManager.createNamedQuery("ReturnAllPublisher", Publishers.class).getResultList()){
                         System.out.println(publisherPrimary.getName());
-                     }//end of for loop to display primary key
+                     }
                      break;
-                  //display if the user wants the book information
-                  //TODO: Create and print list of books
                   case "2":
                      System.out.println("List Books Keys");
                      break;
-                  //display if the user wants the authoring entity information
-                  //TODO: Print out only the primary keys
                   case "3":
                      System.out.println("List Authoring Entities Keys");
                      for(Authoring_Entities Authoring_Entities: library.entityManager.createNamedQuery("ReturnAllAuthors", Authoring_Entities.class).getResultList()){
                         System.out.println(Authoring_Entities.toString());
-                     }//end of for loop to display primaries of authoring entities
+                     }
                      break;
-               }//end of the switch case for displaying primary keys
+               }
                break;
 
             default:userLeaves = true;
@@ -191,8 +173,8 @@ public class Library {
             case "7": if(library.displayAllAuthoring_Entities()) {library.displayAllAuthoring_Entities();}
             break;
             case "8": library.authoringMenu();*/
-         }//end of the switch case that encapsulates the start of the menu
-      }//end of while statement when the user decides to leave or stay
+         }
+      }
 
       tx.commit();
 
@@ -202,16 +184,12 @@ public class Library {
 
    } // End of the main method
 
-   /**
-    * This method is simply for displaying the authoring menu for adding new authoring entities
-    * */
    public void authoringMenu(){
       boolean userLeaves = false;
       while(!userLeaves) {
          System.out.println("Please select one of the options. Be sure to ONLY input '1' if you want the first option;" +
                  "otherwise, you will leave this menu\n1. Add A New Writing Group\n2. Add a New Individual Author" +
                  "\n3. Add a New Ad Hoc Team\n4. Add an Author to an Ad Hoc Team\nAnything Else: Exit Authoring Menu");
-         //extract information
          String userChoice = input.next();
          input.nextLine();
          switch (userChoice) {
@@ -230,9 +208,6 @@ public class Library {
       }
    }
 
-   /**
-    * The add writing group method will add the user's writing group, with the assumption it does not exist in the entity manager
-    * */
    public void addWritingGroup(){
       boolean nameCheck = false;
       while(!nameCheck){
@@ -272,9 +247,6 @@ public class Library {
       }
    }
 
-   /**
-    * The add individual author method will add the user's writing group, with the assumption it does not exist in the entity manager
-    * */
    public void addIndividualAuthor(){
       boolean nameCheck = false;
       while(!nameCheck) {
@@ -282,15 +254,15 @@ public class Library {
          String userName = input.next();
          input.nextLine();
          try{
-            List<Individual_Authors> individualAuthors = this.entityManager.createNamedQuery("ReturnPublisher",
-                    Individual_Authors.class).setParameter(1, userName).getResultList();
+            List<IndividualAuthors> individualAuthors = this.entityManager.createNamedQuery("ReturnPublisher",
+                    IndividualAuthors.class).setParameter(1, userName).getResultList();
             if (individualAuthors.size() == 0) {
                nameCheck= true;
                System.out.println("What is the email of " + userName + "?");
                String userEmail = input.next();
                input.nextLine();
-               ArrayList<Individual_Authors> userAuthor = new ArrayList<Individual_Authors>();
-               userAuthor.add(new Individual_Authors(userName,userEmail));
+               ArrayList<IndividualAuthors> userAuthor = new ArrayList<IndividualAuthors>();
+               userAuthor.add(new IndividualAuthors(userName,userEmail));
                this.createEntity(userAuthor);
             } // end of if statement
             else{
@@ -302,10 +274,7 @@ public class Library {
          }
       }
    }
-   /**
-    * This input is used for
-    * */
-   //TODO: MAKE THIS WORK FOR THE ADD HOC TEAM
+   // needs to be completed
    public void addAdHocTeam(){
       boolean nameCheck = false;
       while(!nameCheck) {
@@ -313,15 +282,15 @@ public class Library {
          String userName = input.next();
          input.nextLine();
          try{
-            List<Individual_Authors> individualAuthors = this.entityManager.createNamedQuery("ReturnPublisher",
-                    Individual_Authors.class).setParameter(1, userName).getResultList();
+            List<IndividualAuthors> individualAuthors = this.entityManager.createNamedQuery("ReturnPublisher",
+                    IndividualAuthors.class).setParameter(1, userName).getResultList();
             if (individualAuthors.size() == 0) {
                nameCheck= true;
                System.out.println("What is the email of " + userName + "?");
                String userEmail = input.next();
                input.nextLine();
-               ArrayList<Individual_Authors> userAuthor = new ArrayList<Individual_Authors>();
-               userAuthor.add(new Individual_Authors(userName,userEmail));
+               ArrayList<IndividualAuthors> userAuthor = new ArrayList<IndividualAuthors>();
+               userAuthor.add(new IndividualAuthors(userName,userEmail));
                this.createEntity(userAuthor);
             } // end of if statement
             else{
@@ -334,18 +303,10 @@ public class Library {
       }
    }
 
-   /**
-    * This input is used for
-    * */
-   //TODO: CREATE THIS SO INDIVIDUAL AUTHOR CAN GO INTO AD HOC TEAM
    public void addAuthorToAdHoc(){
 
    }
 
-   /**
-    * This method is simply for the purpose of displaying all authoring entities and telling pickAuthoringEntity if it exists
-    * @return this returns a boolean that will state whether or not there are any Authoring entities in the entity manager
-    * */
    public boolean displayAllAuthoring_Entities(){
       try {
          for (Authoring_Entities author : this.entityManager.createNamedQuery("ReturnAllAuthors", Authoring_Entities.class).getResultList()) {
@@ -359,10 +320,6 @@ public class Library {
       }
    }
 
-   /**
-    * This method will return an instance of an AuthoringEntity with the assumption the user selects a valid entity
-    * @return returns the instance of the authoring entity that the user selects
-    * */
    public Authoring_Entities pickAuthoringEntity(){
       boolean userChoice = false;
       while(!userChoice){
@@ -381,9 +338,6 @@ public class Library {
       return null;
    }
 
-   /**
-    * This input is used for
-    * */
    public boolean displayAllBooks(){
       try {
          for (Books book : this.entityManager.createNamedQuery("ReturnAllBooks", Books.class).getResultList()) {
@@ -397,9 +351,6 @@ public class Library {
       }
    }
 
-   /**
-    * Add book has the sole purpose of appending a book into the entity manager to be deleted or updated
-    * */
    public void addBook(){
       boolean bookCheck = false;
       while(!bookCheck) {
@@ -411,7 +362,7 @@ public class Library {
                     Books.class).setParameter(1, userISBN).getResultList();
             if (book.size() == 0) {
                bookCheck= true;
-               System.out.println("What is the title of the book?");
+               System.out.println("What is the title of the publisher?");
                String userTitle = input.next();
                input.nextLine();
                System.out.println("What year was this book published?");
@@ -433,9 +384,6 @@ public class Library {
       }
    }
 
-   /**
-    * Delete book has the simple purpose of asking the user which book should be deleted from the entity manager by ISBN
-    * */
    public void deleteBook(){
       List<Books> booksList = this.entityManager.createNamedQuery("ReturnAllBooks", Books.class).getResultList();
       if(booksList.size()>0) {
@@ -469,17 +417,10 @@ public class Library {
       }
    }
 
-   /**
-    * This input is used for
-    * */
    public void updateBook(){
 
    }
 
-   /**
-    * Display All publishers has the purpose of displaying all publishers and returning a boolean to determine if there is data in the database
-    * @return  return boolean to pickPublisher in order to determine if the user can actually pick data
-    * */
    public boolean displayAllPublishers(){
       try {
          for (Publishers publisher : this.entityManager.createNamedQuery("ReturnAllPublisher", Publishers.class).getResultList()) {
@@ -493,10 +434,6 @@ public class Library {
       }
    }
 
-   /**
-    * This will allow the user to pick a publisher
-    * @return returns the instance of the publisher the user chooses
-    * */
    public Publishers pickPublisher(){
       boolean userChoice = false;
       while(!userChoice){
@@ -515,9 +452,6 @@ public class Library {
       return null;
    }
 
-   /**
-    * addPublisher will allow the user to add new publishers into the entity manager for later use
-    * */
    public void addPublisher(){
       boolean nameCheck = false;
       while(!nameCheck) {

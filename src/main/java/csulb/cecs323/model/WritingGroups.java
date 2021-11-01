@@ -27,6 +27,7 @@ public class WritingGroups extends Authoring_Entities{
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "email", cascade = CascadeType.ALL)
     private List<Authoring_Entities> email;
 
+    @Column(length = 30, name = "head_writer")
     private String head_Writer;
 
     private int year_Formed;

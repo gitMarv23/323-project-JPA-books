@@ -3,9 +3,6 @@ package csulb.cecs323.model;
 import javax.persistence.*;
 import java.util.List;
 
-/**
- * This input is used for
- * */
 @Entity
 @NamedNativeQueries({
     @NamedNativeQuery(
@@ -35,20 +32,14 @@ public abstract class Authoring_Entities {
     @Column(nullable = false, length = 80 )
     private String name;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "authoringName", cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "authoringName", cascade = CascadeType.PERSIST)
     private List<Books> books;
 
 
-    /**
-     * This input is used for
-     * */
     public Authoring_Entities() {
 
     }
 
-    /**
-     * This input is used for
-     * */
     public Authoring_Entities(String email, String name){
         this.email = email;
         this.name = name;
