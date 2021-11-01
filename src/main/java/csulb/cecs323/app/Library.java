@@ -156,21 +156,6 @@ public class Library {
 
             default:userLeaves = true;
                break;
-
-            // old code
-            /*library.displayAllPublishers();
-            break;
-            case "2": library.addPublisher();
-            break;
-            case "3": if(library.displayAllAuthoring_Entities() && library.displayAllPublishers()) {library.displayAllBooks();}
-            break;
-            case "4": library.addBook();
-            break;
-            case "5": library.deleteBook();
-            break;
-            case "7": if(library.displayAllAuthoring_Entities()) {library.displayAllAuthoring_Entities();}
-            break;
-            case "8": library.authoringMenu();*/
          }
       }
 
@@ -186,8 +171,12 @@ public class Library {
       boolean userLeaves = false;
       while(!userLeaves) {
          System.out.println("Please select one of the options. Be sure to ONLY input '1' if you want the first option;" +
-                 "otherwise, you will leave this menu\n1. Add A New Writing Group\n2. Add a New Individual Author" +
-                 "\n3. Add a New Ad Hoc Team\n4. Add an Author to an Ad Hoc Team\nAnything Else: Exit Authoring Menu");
+                 "otherwise, you will leave this menu\n" +
+                 "1. Add A New Writing Group\n" +
+                 "2. Add a New Individual Author\n" +
+                 "3. Add a New Ad Hoc Team\n" +
+                 "4. Add an Author to an Ad Hoc Team\n" +
+                 "Anything Else: Exit Authoring Menu");
          String userChoice = input.next();
          input.nextLine();
          switch (userChoice) {
@@ -252,7 +241,7 @@ public class Library {
          String userName = input.next();
          input.nextLine();
          try{
-            List<IndividualAuthors> individualAuthors = this.entityManager.createNamedQuery("ReturnPublisher",
+            List<IndividualAuthors> individualAuthors = this.entityManager.createNamedQuery("ReturnAuthor",
                     IndividualAuthors.class).setParameter(1, userName).getResultList();
             if (individualAuthors.size() == 0) {
                nameCheck= true;
@@ -260,7 +249,7 @@ public class Library {
                String userEmail = input.next();
                input.nextLine();
                ArrayList<IndividualAuthors> userAuthor = new ArrayList<IndividualAuthors>();
-               userAuthor.add(new IndividualAuthors(userName,userEmail));
+               userAuthor.add(new IndividualAuthors(userEmail,userName));
                this.createEntity(userAuthor);
             } // end of if statement
             else{
