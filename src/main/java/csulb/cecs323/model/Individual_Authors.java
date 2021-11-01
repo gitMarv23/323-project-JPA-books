@@ -1,7 +1,7 @@
 package csulb.cecs323.model;
 
 /**
- * Impors necessary for current project
+ * Imports necessary for current project
  */
 import javax.persistence.*;
 import java.util.*;
