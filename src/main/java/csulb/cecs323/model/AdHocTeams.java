@@ -4,6 +4,9 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This input is used for
+ * */
 @Entity
 @DiscriminatorValue("AD Hoc Teams")
 public class AdHocTeams extends Authoring_Entities{
@@ -15,10 +18,16 @@ public class AdHocTeams extends Authoring_Entities{
     )
     private List<Individual_Authors> individual_authors;
 
+    /**
+     * This input is used for
+     * */
     public AdHocTeams(){
 
     }
 
+    /**
+     * This input is used for
+     * */
     public AdHocTeams(String name,String email){
         super(name,email);
         this.individual_authors = new ArrayList<Individual_Authors>();

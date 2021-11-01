@@ -2,6 +2,10 @@ package csulb.cecs323.model;
 
 import javax.persistence.*;
 import java.util.List;
+
+/**
+ * This input is used for
+ * */
 @NamedNativeQuery(
         name="ReturnWriting",
         query = "SELECT * " +
@@ -43,10 +47,16 @@ public class WritingGroups extends Authoring_Entities{
         this.email = email;
     }
 
+    /**
+     * This input is used for
+     * */
     public WritingGroups() {
 
     }
 
+    /**
+     * This input is used for
+     * */
     public WritingGroups(String email, String name, String head_Writer, int yearFormed){
         super(email,name);
         this.head_Writer = head_Writer;

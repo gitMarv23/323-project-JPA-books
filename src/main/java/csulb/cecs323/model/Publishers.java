@@ -4,6 +4,10 @@ package csulb.cecs323.model;
 import javax.persistence.*;
 import java.util.List;
 
+
+/**
+ * This input is used for
+ * */
 @Table(name = "Publishers", uniqueConstraints = {
         @UniqueConstraint(name = "uc_publishers_email", columnNames = {"email", "phone"})
 })
@@ -61,12 +65,18 @@ public class Publishers {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "publisherName", cascade = CascadeType.ALL)
     private List<Books> books;
 
+    /**
+     * This input is used for
+     * */
     public Publishers(String name, String email, String phone){
         this.name = name;
         this.email = email;
         this.phone = phone;
     }
 
+    /**
+     * This input is used for
+     * */
     public Publishers(){
 
     }

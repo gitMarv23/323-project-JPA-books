@@ -3,6 +3,9 @@ package csulb.cecs323.model;
 import javax.persistence.*;
 import java.util.List;
 
+/**
+ * This input is used for
+ * */
 @NamedNativeQuery(
         name="ReturnBook",
         query = "SELECT * " +
@@ -41,10 +44,16 @@ public class Books {
     @JoinColumn(name = "publisher_name", nullable = false, referencedColumnName = "publisher_name")
     private Publishers publisherName;
 
+    /**
+     * This input is used for
+     * */
     public Books(){
 
     }
 
+    /**
+     * This input is used for
+     * */
     public Books(String ISBN, String title, int yearPublished,Publishers publisherName ,  Authoring_Entities authoringName){
         this.ISBN = ISBN;
         this.title = title;

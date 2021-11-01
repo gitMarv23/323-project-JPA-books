@@ -3,6 +3,9 @@ package csulb.cecs323.model;
 import javax.persistence.*;
 import java.util.List;
 
+/**
+ * This input is used for
+ * */
 @Entity
 @NamedNativeQueries({
     @NamedNativeQuery(
@@ -36,10 +39,16 @@ public abstract class Authoring_Entities {
     private List<Books> books;
 
 
+    /**
+     * This input is used for
+     * */
     public Authoring_Entities() {
 
     }
 
+    /**
+     * This input is used for
+     * */
     public Authoring_Entities(String email, String name){
         this.email = email;
         this.name = name;
