@@ -27,21 +27,20 @@ import java.util.logging.Logger;
 
 /**
  * A simple application to demonstrate how to persist an object in JPA.
- * <p>
  * This is for demonstration and educational purposes only.
- * </p>
- * <p>
- *     Originally provided by Dr. Alvaro Monge of CSULB, and subsequently modified by Dave Brown.
- * </p>
+ * Originally provided by Dr. Alvaro Monge of CSULB, and subsequently modified by Dave Brown.
  */
 public class Library {
    /**
     * You will likely need the entityManager in a great many functions throughout your application.
-    * Rather than make this a global variable, we will make it an instance variable within the CarClub
+    * Rather than make this a global variable, we will make it an instance variable within the Library
     * class, and create an instance of CarClub in the main.
     */
    private EntityManager entityManager;
 
+   /**
+    * Default input scanner variable for user input into database
+    * */
    private static Scanner input = new Scanner(System.in);
 
    /**
@@ -54,8 +53,7 @@ public class Library {
    private static final Logger LOGGER = Logger.getLogger(Library.class.getName());
 
    /**
-    * The constructor for the Library class.  All that it does is stash the provided EntityManager
-    * for use later in the application.
+    * The constructor for the Library class to be utilized throughout the entire application
     * @param manager    The EntityManager that we will use.
     */
    public Library(EntityManager manager) { this.entityManager = manager; }
