@@ -4,15 +4,16 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 @DiscriminatorValue("AD Hoc Teams")
 public class AdHocTeams extends Authoring_Entities{
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(
-            name = "ad_hoc_teams_member",
+            name = "Ad_hoc_teams_member",
             joinColumns = @JoinColumn(name = "ad_hoc_teams_email"),
             inverseJoinColumns = @JoinColumn(name = "individual_authors_email")
     )
-    private List<IndividualAuthors> individualAuthors;
+    private List<Individual_Authors> individual_authors;
 
     public AdHocTeams(){
 
@@ -20,11 +21,11 @@ public class AdHocTeams extends Authoring_Entities{
 
     public AdHocTeams(String name,String email){
         super(name,email);
-        this.individualAuthors = new ArrayList<IndividualAuthors>();
+        this.individual_authors = new ArrayList<Individual_Authors>();
     }
 
-    public List<IndividualAuthors> getIndividualAuthors(){
-        return this.individualAuthors;
+    public List<Individual_Authors> getIndividualAuthors(){
+        return this.individual_authors;
     }
 
 }

@@ -5,7 +5,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Table(name = "Publishers", uniqueConstraints = {
-        @UniqueConstraint(name = "uc_publishers_email", columnNames = {"email", "phoneNumber"})
+        @UniqueConstraint(name = "uc_publishers_email", columnNames = {"email", "phone"})
 })
 @NamedNativeQuery(
         name="ReturnPublisher",
@@ -58,7 +58,7 @@ public class Publishers {
     }
 
     // one to many reevaluation since relation scheme changed with publisher_name pk to foreign_key in books
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "publisherName", cascade = {CascadeType.PERSIST,CascadeType.MERGE})
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "publisherName", cascade = CascadeType.ALL)
     private List<Books> books;
 
     public Publishers(String name, String email, String phone){
@@ -70,9 +70,6 @@ public class Publishers {
     public Publishers(){
 
     }
-
-
-
 
     @Override
     public String toString(){

@@ -17,24 +17,28 @@ import java.util.List;
         resultClass = Books.class
 )
 @Entity
+@Table(uniqueConstraints = {@UniqueConstraint(columnNames =
+        {"title", "publisher_name"}),
+        @UniqueConstraint( columnNames =
+                {"title", "authoring_entity_name"})})
 public class Books {
 
     @Id
     @Column(nullable = false, name = "isbn", length = 17)
     private String ISBN;
 
-    @Column(nullable = false, name = "book_title", length = 80)
+    @Column(nullable = false, name = "title", length = 80)
     private String title;
 
     @Column(nullable = false, name = "year_published")
     private int yearPublished;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "Authoring_Entity_Type", nullable = false, referencedColumnName = "AUTHORING_ENTITY_TYPE")
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "Authoring_Entity_Name", nullable = false, referencedColumnName = "email")
     private Authoring_Entities authoringName;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "publisher_name", nullable = false, referencedColumnName = "name")
+    @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    @JoinColumn(name = "publisher_name", nullable = false, referencedColumnName = "publisher_name")
     private Publishers publisherName;
 
     public Books(){
@@ -50,5 +54,14 @@ public class Books {
 
     }
 
-
+    @Override
+    public String toString() {
+        return "Books{" +
+                "ISBN='" + ISBN + '\'' +
+                ", title='" + title + '\'' +
+                ", yearPublished=" + yearPublished +
+                ", authoringName=" + authoringName +
+                ", publisherName=" + publisherName +
+                '}';
+    }
 }

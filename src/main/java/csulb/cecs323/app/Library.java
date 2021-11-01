@@ -19,7 +19,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -71,7 +70,6 @@ public class Library {
       EntityTransaction tx = manager.getTransaction();
 
       tx.begin();
-
       System.out.println("Welcome to JPA Books!");
       boolean userLeaves = false;
       while(!userLeaves) {
@@ -126,6 +124,7 @@ public class Library {
                break;
             case "3":
                System.out.println("Delete a Book");
+               library.deleteBook();
                break;
             case "4":
                System.out.println("Update a Book");
@@ -254,15 +253,15 @@ public class Library {
          String userName = input.next();
          input.nextLine();
          try{
-            List<IndividualAuthors> individualAuthors = this.entityManager.createNamedQuery("ReturnPublisher",
-                    IndividualAuthors.class).setParameter(1, userName).getResultList();
+            List<Individual_Authors> individualAuthors = this.entityManager.createNamedQuery("ReturnPublisher",
+                    Individual_Authors.class).setParameter(1, userName).getResultList();
             if (individualAuthors.size() == 0) {
                nameCheck= true;
                System.out.println("What is the email of " + userName + "?");
                String userEmail = input.next();
                input.nextLine();
-               ArrayList<IndividualAuthors> userAuthor = new ArrayList<IndividualAuthors>();
-               userAuthor.add(new IndividualAuthors(userName,userEmail));
+               ArrayList<Individual_Authors> userAuthor = new ArrayList<Individual_Authors>();
+               userAuthor.add(new Individual_Authors(userName,userEmail));
                this.createEntity(userAuthor);
             } // end of if statement
             else{
@@ -282,15 +281,15 @@ public class Library {
          String userName = input.next();
          input.nextLine();
          try{
-            List<IndividualAuthors> individualAuthors = this.entityManager.createNamedQuery("ReturnPublisher",
-                    IndividualAuthors.class).setParameter(1, userName).getResultList();
+            List<Individual_Authors> individualAuthors = this.entityManager.createNamedQuery("ReturnPublisher",
+                    Individual_Authors.class).setParameter(1, userName).getResultList();
             if (individualAuthors.size() == 0) {
                nameCheck= true;
                System.out.println("What is the email of " + userName + "?");
                String userEmail = input.next();
                input.nextLine();
-               ArrayList<IndividualAuthors> userAuthor = new ArrayList<IndividualAuthors>();
-               userAuthor.add(new IndividualAuthors(userName,userEmail));
+               ArrayList<Individual_Authors> userAuthor = new ArrayList<Individual_Authors>();
+               userAuthor.add(new Individual_Authors(userName,userEmail));
                this.createEntity(userAuthor);
             } // end of if statement
             else{
@@ -351,6 +350,7 @@ public class Library {
       }
    }
 
+   // runtime issues
    public void addBook(){
       boolean bookCheck = false;
       while(!bookCheck) {
@@ -362,7 +362,7 @@ public class Library {
                     Books.class).setParameter(1, userISBN).getResultList();
             if (book.size() == 0) {
                bookCheck= true;
-               System.out.println("What is the title of the publisher?");
+               System.out.println("What is the title of the book?");
                String userTitle = input.next();
                input.nextLine();
                System.out.println("What year was this book published?");

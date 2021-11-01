@@ -20,7 +20,7 @@ import java.util.List;
 @DiscriminatorValue("Writing Group")
 public class WritingGroups extends Authoring_Entities{
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "email", cascade = {CascadeType.PERSIST,CascadeType.MERGE})
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "email", cascade = CascadeType.ALL)
     private List<Authoring_Entities> email;
 
     private String head_Writer;

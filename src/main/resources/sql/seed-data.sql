@@ -1,1 +1,1 @@
---INSERT INTO auto_body_styles (name, description) VALUES ('convertible', 'Sleek sporty alternatives: top down or up.')
+

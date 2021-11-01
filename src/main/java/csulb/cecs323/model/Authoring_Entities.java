@@ -32,7 +32,7 @@ public abstract class Authoring_Entities {
     @Column(nullable = false, length = 80 )
     private String name;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "authoringName", cascade = CascadeType.PERSIST)
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "authoringName", cascade = CascadeType.ALL)
     private List<Books> books;
 
 
