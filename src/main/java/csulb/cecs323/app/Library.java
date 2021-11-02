@@ -130,6 +130,7 @@ public class Library {
                break;
             case "3":
                System.out.println("Delete a Book");
+               library.deleteBook();
                break;
             case "4":
                System.out.println("Update a Book");
@@ -485,6 +486,7 @@ public class Library {
                }
                else {
                   System.out.println("ISBN has been successfully deleted.");
+                  //TODO: FIX DELETE
                   this.entityManager.remove(entityManager.find(Books.class, userName));
                   userChoice = true;
                }

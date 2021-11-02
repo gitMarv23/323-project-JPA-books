@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="More changes to fix authoring entities and books">
+    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="Fixed Individual_Authors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/IndividualAuthors.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/AdHocTeams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Ad_Hoc_Teams_Members.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Individual_Authors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Individual_Authors.java" afterDir="false" />
     </list>
     <list id="e50bf78b-095a-4b50-8f4b-1bb291197f1a" name="Changes by marvin" comment="" />
@@ -160,7 +160,7 @@
       <workItem from="1635390855222" duration="1414000" />
       <workItem from="1635392308124" duration="5489000" />
       <workItem from="1635740004075" duration="5713000" />
-      <workItem from="1635810494558" duration="2469000" />
+      <workItem from="1635810494558" duration="4667000" />
     </task>
     <task id="LOCAL-00001" summary="jpa mini hw template">
       <created>1634443331775</created>
@@ -190,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635721586577</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fixed Individual_Authors">
+      <created>1635813030423</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1635813030424</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +220,8 @@
     <MESSAGE value="jpa mini hw template" />
     <MESSAGE value="marvin wipe and rebuild based on brown's recommendations" />
     <MESSAGE value="Fixed issues with Authoring_Entities" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed issues with Authoring_Entities" />
+    <MESSAGE value="Fixed Individual_Authors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Individual_Authors" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
