@@ -32,7 +32,6 @@ public class Individual_Authors extends  Authoring_Entities{
      * List of Ad Hoc Team the Individual Author will belong to.
      * Relation scheme depicts the email Foreign Key connections
      */
-    //TODO: support hour fix
     @ManyToMany(mappedBy = "individual_authors",
             cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private List<Ad_Hoc_Teams_Members> adHocTeamMembers;

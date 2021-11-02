@@ -30,7 +30,6 @@ import java.util.logging.Logger;
  * This is for demonstration and educational purposes only.
  * Originally provided by Dr. Alvaro Monge of CSULB, and subsequently modified by Dave Brown.
  */
-//TODO: inner function comments upon functionality completion
 public class Library {
    /**
     * You will likely need the entityManager in a great many functions throughout your application.
@@ -57,13 +56,12 @@ public class Library {
     * The constructor for the Library class to be utilized throughout the entire application
     * @param manager    The EntityManager that we will use.
     */
-   public Library(EntityManager manager) { this.entityManager = manager; }
+   public Library(EntityManager manager) { this.entityManager = manager; } // end Library constructor
 
    /**
     * Main Library program to run upon execution.
     * Simulates entity relationship model provided by Dave Brown
     */
-   //TODO: functionality check and interface fluidity
    public static void main(String[] args) {
       LOGGER.fine("Creating EntityManagerFactory and EntityManager");
       EntityManagerFactory factory = Persistence.createEntityManagerFactory("Library");
@@ -400,7 +398,6 @@ public class Library {
     * This function will be used in other methods such as addBook.
     * @return first index from List object containing desired Entity
     * @return null if an invalid publisher name has been selected
-
     */
    public Authoring_Entities pickAuthoringEntity(){
       boolean userChoice = false;
@@ -437,6 +434,10 @@ public class Library {
       }
    } // end of displayAllBooks
 
+   /**
+    * Select a book from database based on user's input for ISBN
+    * @return  null
+    */
    public Books pickBook(){
       boolean userChoice = false;
       while(!userChoice){
@@ -452,7 +453,7 @@ public class Library {
          }
       }
       return null;
-   } // end of pickPublisher
+   } // end of pickBook
 
    /**
     * Adds a Book entity to the database utilizing JPA Annotations from associated classes.
