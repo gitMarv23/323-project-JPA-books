@@ -226,7 +226,7 @@
       <option name="project" value="LOCAL" />
       <updated>1635818220064</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +251,7 @@
     <MESSAGE value="Fixed issues with Authoring_Entities" />
     <MESSAGE value="Fixed Individual_Authors" />
     <MESSAGE value="AddAuthorToAdHoc and AdhocTeams created" />
+    <option name="LAST_COMMIT_MESSAGE" value="AddAuthorToAdHoc and AdhocTeams created" />
     <MESSAGE value="Worked on delete book(WIP) not working" />
     <option name="LAST_COMMIT_MESSAGE" value="Worked on delete book(WIP) not working" />
   </component>

@@ -35,6 +35,10 @@ public class Books {
 
     @Column(nullable = false, name = "year_published")
     private int yearPublished;
+    
+    public String getISBN() {
+        return ISBN;
+    }
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "Authoring_Entity_Name", nullable = false, referencedColumnName = "email")
@@ -51,6 +55,14 @@ public class Books {
 
     }
 
+    public Authoring_Entities getAuthoringName() {
+        return authoringName;
+    }
+
+    public void setAuthoringName(Authoring_Entities authoringName) {
+        this.authoringName = authoringName;
+    }
+
     /**
      * This input is used for
      * */
@@ -65,12 +77,10 @@ public class Books {
 
     @Override
     public String toString() {
-        return "Books{" +
-                "ISBN='" + ISBN + '\'' +
-                ", title='" + title + '\'' +
-                ", yearPublished=" + yearPublished +
-                ", authoringName=" + authoringName +
-                ", publisherName=" + publisherName +
-                '}';
+        return "Books - Name: " + ISBN + "   Title: " + title +
+                "   Year Published: " + yearPublished +
+                "   Authoring Email: " + authoringName.getEmail() +
+                "   Publisher Name: " + publisherName.getName();
     }
+
 }
