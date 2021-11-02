@@ -20,7 +20,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -261,15 +260,15 @@ public class Library {
          String userName = input.next();
          input.nextLine();
          try{
-            List<IndividualAuthors> individualAuthors = this.entityManager.createNamedQuery("ReturnAuthor",
-                    IndividualAuthors.class).setParameter(1, userName).getResultList();
+            List<Individual_Authors> individualAuthors = this.entityManager.createNamedQuery("ReturnIndividualAuthor",
+                    Individual_Authors.class).setParameter(1, userName).getResultList();
             if (individualAuthors.size() == 0) {
                nameCheck= true;
                System.out.println("What is the email of " + userName + "?");
                String userEmail = input.next();
                input.nextLine();
-               ArrayList<IndividualAuthors> userAuthor = new ArrayList<IndividualAuthors>();
-               userAuthor.add(new IndividualAuthors(userEmail,userName));
+               ArrayList<Individual_Authors> userAuthor = new ArrayList<Individual_Authors>();
+               userAuthor.add(new Individual_Authors(userEmail,userName));
                this.createEntity(userAuthor);
             } // end of if statement
             else{
@@ -294,15 +293,15 @@ public class Library {
          String userName = input.next();
          input.nextLine();
          try{
-            List<IndividualAuthors> individualAuthors = this.entityManager.createNamedQuery("ReturnPublisher",
-                    IndividualAuthors.class).setParameter(1, userName).getResultList();
+            List<Individual_Authors> individualAuthors = this.entityManager.createNamedQuery("ReturnPublisher",
+                    Individual_Authors.class).setParameter(1, userName).getResultList();
             if (individualAuthors.size() == 0) {
                nameCheck= true;
                System.out.println("What is the email of " + userName + "?");
                String userEmail = input.next();
                input.nextLine();
-               ArrayList<IndividualAuthors> userAuthor = new ArrayList<IndividualAuthors>();
-               userAuthor.add(new IndividualAuthors(userName,userEmail));
+               ArrayList<Individual_Authors> userAuthor = new ArrayList<Individual_Authors>();
+               userAuthor.add(new Individual_Authors(userEmail,userName));
                this.createEntity(userAuthor);
             } // end of if statement
             else{

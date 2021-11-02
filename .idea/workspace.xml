@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="Library class javadocs ~90%">
+    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="More changes to fix authoring entities and books">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/IndividualAuthors.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Individual_Authors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Individual_Authors.java" afterDir="false" />
     </list>
     <list id="e50bf78b-095a-4b50-8f4b-1bb291197f1a" name="Changes by marvin" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +30,9 @@
       </set>
     </option>
   </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="Lawrence" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -36,6 +41,7 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitRewordedCommitMessages">
     <option name="commitMessagesMapping">
@@ -67,7 +73,7 @@
       <map>
         <entry key="JPA Inspector" value="false" />
         <entry key="JPA Palette" value="false" />
-        <entry key="JPA Structure" value="true" />
+        <entry key="JPA Structure" value="false" />
       </map>
     </option>
   </component>
@@ -100,7 +106,7 @@
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="csulb.cecs323.app.Library" />
-      <module name="cecs323-jpa-Library" />
+      <module name="cecs323-jpa-CarClub" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="csulb.cecs323.app.*" />
@@ -121,10 +127,6 @@
         </option>
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.Library" />
-      <item itemvalue="Database Script.Books.sql" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Library" />
@@ -157,6 +159,8 @@
       <workItem from="1635365634899" duration="1988000" />
       <workItem from="1635390855222" duration="1414000" />
       <workItem from="1635392308124" duration="5489000" />
+      <workItem from="1635740004075" duration="5713000" />
+      <workItem from="1635810494558" duration="2469000" />
     </task>
     <task id="LOCAL-00001" summary="jpa mini hw template">
       <created>1634443331775</created>
@@ -186,28 +190,7 @@
       <option name="project" value="LOCAL" />
       <updated>1635721586577</updated>
     </task>
-    <task id="LOCAL-00005" summary="javadoc private vars and Library const fix/clean up">
-      <created>1635776255250</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1635776255250</updated>
-    </task>
-    <task id="LOCAL-00006" summary="javadoc private vars and Library const fix/clean up">
-      <created>1635776404098</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1635776404098</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Library class javadocs ~90%">
-      <created>1635777613340</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1635777613340</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,9 +213,7 @@
     <MESSAGE value="jpa mini hw template" />
     <MESSAGE value="marvin wipe and rebuild based on brown's recommendations" />
     <MESSAGE value="Fixed issues with Authoring_Entities" />
-    <MESSAGE value="javadoc private vars and Library const fix/clean up" />
-    <MESSAGE value="Library class javadocs ~90%" />
-    <option name="LAST_COMMIT_MESSAGE" value="Library class javadocs ~90%" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed issues with Authoring_Entities" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -8,6 +8,13 @@ import java.util.List;
  * This input is used for
  * */
 @Entity
+@NamedNativeQuery(
+        name="ReturnIndividualAuthor",
+        query = "SELECT * " +
+                "FROM   AUTHORING_ENTITIES " +
+                "WHERE  NAME = ? ",
+        resultClass = Individual_Authors.class
+)
 @DiscriminatorValue("Individual Authors")
 public class Individual_Authors extends  Authoring_Entities{
 
