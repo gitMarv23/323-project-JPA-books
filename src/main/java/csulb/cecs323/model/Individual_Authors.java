@@ -54,7 +54,7 @@ public class Individual_Authors extends  Authoring_Entities{
      * Overloaded constructor to build an Individual Author with given.
      * Creates Ad Hoc Teams List to represent team author will be a part of if applicable.
      * @param email Email Address inputted by the user.
-     * @param name  Individual author name to be inputted by user.
+     * @param name  Individual author name to be inputted by user.1
      */
     public Individual_Authors(String email, String name){
         super(email,name);

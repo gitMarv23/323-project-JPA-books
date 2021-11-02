@@ -436,7 +436,8 @@ public class Library {
 
    /**
     * Select a book from database based on user's input for ISBN
-    * @return  null
+    * @return  null if ISBN is invalid
+    * @return  book from list if match found
     */
    public Books pickBook(){
       boolean userChoice = false;
@@ -446,7 +447,7 @@ public class Library {
          String userBook = input.nextLine();
          List<Books> book = this.entityManager.createNamedQuery("ReturnBook",Books.class).setParameter(1,userBook).getResultList();
          if(book.size()==0){
-            System.out.println("Sorry, you entered an invalid publisher name.");
+            System.out.println("Sorry, you entered an invalid ISBN.");
          }
          else{
             return book.get(0);
@@ -663,5 +664,4 @@ public class Library {
          LOGGER.info("Persisted object after flush (non-null id): " + next);
       }
    } // End of createEntity member method
-
 } // End of Library class
