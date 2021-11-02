@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="Fixed inputnext issues">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="Library in line comments done">
       <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" afterDir="false" />
     </list>
     <list id="e50bf78b-095a-4b50-8f4b-1bb291197f1a" name="Changes by marvin" comment="Changes by marvin" />
@@ -236,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635878460669</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Library in line comments done">
+      <created>1635885264711</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1635885264711</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,7 +270,8 @@
     <MESSAGE value="Worked on delete book(WIP) not working" />
     <MESSAGE value="Finalized Functionality of program" />
     <MESSAGE value="Fixed add to ad hoc team" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed add to ad hoc team" />
+    <MESSAGE value="Library in line comments done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Library in line comments done" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
