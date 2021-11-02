@@ -36,11 +36,11 @@ public class Books {
     @Column(nullable = false, name = "year_published")
     private int yearPublished;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "Authoring_Entity_Name", nullable = false, referencedColumnName = "email")
     private Authoring_Entities authoringName;
 
-    @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY,cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "publisher_name", nullable = false, referencedColumnName = "publisher_name")
     private Publishers publisherName;
 
