@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="Fixed Individual_Authors">
+    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="AddAuthorToAdHoc and AdhocTeams created">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/AdHocTeams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Ad_Hoc_Teams_Members.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Individual_Authors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Individual_Authors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/seed-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/seed-data.sql" afterDir="false" />
     </list>
+    <list id="71e61f36-2f48-437d-a43b-a14ab289baa3" name="Changes by George Vargas" comment="" />
     <list id="e50bf78b-095a-4b50-8f4b-1bb291197f1a" name="Changes by marvin" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +36,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Marv" />
+        <entry key="$PROJECT_DIR$" value="Lawrence" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -102,6 +102,19 @@
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RunManager" selected="Application.Library">
+    <configuration name="CarClub" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="csulb.cecs323.app.CarClub" />
+      <module name="323 Project JPA Books" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="csulb.cecs323.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Library" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -131,8 +144,9 @@
       <list>
         <item itemvalue="Application.Library" />
         <item itemvalue="Database Script.Books.sql" />
-        <item itemvalue="Application.Library" />
+        <item itemvalue="Application.CarClub" />
         <item itemvalue="Database Script.Books.sql" />
+        <item itemvalue="Application.Library" />
       </list>
     </recent_temporary>
   </component>
@@ -160,7 +174,7 @@
       <workItem from="1635390855222" duration="1414000" />
       <workItem from="1635392308124" duration="5489000" />
       <workItem from="1635740004075" duration="5713000" />
-      <workItem from="1635810494558" duration="4667000" />
+      <workItem from="1635810494558" duration="7681000" />
     </task>
     <task id="LOCAL-00001" summary="jpa mini hw template">
       <created>1634443331775</created>
@@ -197,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635813030424</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="AddAuthorToAdHoc and AdhocTeams created">
+      <created>1635815299057</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1635815299057</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,7 +242,8 @@
     <MESSAGE value="marvin wipe and rebuild based on brown's recommendations" />
     <MESSAGE value="Fixed issues with Authoring_Entities" />
     <MESSAGE value="Fixed Individual_Authors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Individual_Authors" />
+    <MESSAGE value="AddAuthorToAdHoc and AdhocTeams created" />
+    <option name="LAST_COMMIT_MESSAGE" value="AddAuthorToAdHoc and AdhocTeams created" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
