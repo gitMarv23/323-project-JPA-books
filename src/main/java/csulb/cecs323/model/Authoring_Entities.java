@@ -44,6 +44,10 @@ public abstract class Authoring_Entities {
         this.name = name;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
     @Override
     public String toString() {
         return "Authoring Entities - " + "Email: " + this.email + "   Name: " + this.name;

@@ -40,9 +40,6 @@ public class WritingGroups extends Authoring_Entities{
         this.year_Formed = yearFormed;
     }
 
-    public List<Authoring_Entities> getEmail() {
-        return email;
-    }
 
     public void setEmail(List<Authoring_Entities> email) {
         this.email = email;
