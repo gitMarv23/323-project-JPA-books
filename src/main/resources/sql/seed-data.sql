@@ -1,1 +1,23 @@
+INSERT into AUTHORING_ENTITIES (EMAIL, AUTHORING_ENTITY_TYPE, NAME, HEAD_WRITER, YEAR_FORMED) VALUES ('Jack@gmail.com', 'Individual Authors', 'Jackdude', null, null)
+INSERT into AUTHORING_ENTITIES (EMAIL, AUTHORING_ENTITY_TYPE, NAME, HEAD_WRITER, YEAR_FORMED) VALUES ('Billy@gmail.com', 'Individual Authors', 'Billy', null, null)
+INSERT into AUTHORING_ENTITIES (EMAIL, AUTHORING_ENTITY_TYPE, NAME, HEAD_WRITER, YEAR_FORMED) VALUES ('Wise@gmail.com', 'Writing Group', 'Wiseman', 'WiserMan', 1955)
+INSERT into AUTHORING_ENTITIES (EMAIL, AUTHORING_ENTITY_TYPE, NAME, HEAD_WRITER, YEAR_FORMED) VALUES ('Bob@gmail.com', 'Individual Authors', 'Bob', null, null)
+INSERT into AUTHORING_ENTITIES (EMAIL, AUTHORING_ENTITY_TYPE, NAME, HEAD_WRITER, YEAR_FORMED) VALUES ('Amazon@gmail.com', 'AD Hoc Teams', 'Amazon', null, null)
+INSERT into AUTHORING_ENTITIES (EMAIL, AUTHORING_ENTITY_TYPE, NAME, HEAD_WRITER, YEAR_FORMED) VALUES ('Microsoft@gmail.com', 'AD Hoc Teams', 'Microsoft', null, null)
 
+INSERT into AD_HOC_TEAMS_MEMBER (INDIVIDUAL_AUTHORS_EMAIL, AD_HOC_TEAMS_EMAIL) VALUES ('Jack@gmail.com', 'Microsoft@gmail.com')
+INSERT into AD_HOC_TEAMS_MEMBER (INDIVIDUAL_AUTHORS_EMAIL, AD_HOC_TEAMS_EMAIL) VALUES ('Billy@gmail.com', 'Microsoft@gmail.com')
+INSERT into AD_HOC_TEAMS_MEMBER (INDIVIDUAL_AUTHORS_EMAIL, AD_HOC_TEAMS_EMAIL) VALUES ('Bob@gmail.com', 'Amazon@gmail.com')
+
+insert into PUBLISHERS (PUBLISHER_NAME, EMAIL, PHONE) values ('Sterling_Publishing', 'SterlingPublishing@gmail.com', '0123456789')
+insert into PUBLISHERS (PUBLISHER_NAME, EMAIL, PHONE) values ('DAW', 'DAW@gmail.com', '0123456788')
+insert into PUBLISHERS (PUBLISHER_NAME, EMAIL, PHONE) values ('Chronicle_Books', 'ChronicleBooks@gmail.com', '0123456787')
+insert into PUBLISHERS (PUBLISHER_NAME, EMAIL, PHONE) values ('Baen', 'Baen@gmail.com', '0123456786')
+insert into PUBLISHERS (PUBLISHER_NAME, EMAIL, PHONE) values ('Flashlight_Press', 'FlashlightPress@gmail.com', '0123456785')
+insert into PUBLISHERS (PUBLISHER_NAME, EMAIL, PHONE) values ('Skyhorse_Publishing', 'SkyhorsePublishing@gmail.com', '0123456785')
+
+insert into BOOKS (ISBN, TITLE, YEAR_PUBLISHED, AUTHORING_ENTITY_NAME, PUBLISHER_NAME) values ('0123456789', 'Dune', 1984, 'Wise@gmail.com', 'Sterling_Publishing')
+insert into BOOKS (ISBN, TITLE, YEAR_PUBLISHED, AUTHORING_ENTITY_NAME, PUBLISHER_NAME) values('7894561231', 'The_Count_of_Monte_Cristo', 1991, 'Wise@gmail.com', 'DAW')
+insert into BOOKS (ISBN, TITLE, YEAR_PUBLISHED, AUTHORING_ENTITY_NAME, PUBLISHER_NAME) values('461325816', 'Crime_and_Punishment', 1866, 'Amazon@gmail.com', 'Chronicle_Books')
+insert into BOOKS (ISBN, TITLE, YEAR_PUBLISHED, AUTHORING_ENTITY_NAME, PUBLISHER_NAME) values('764158521', 'Frankenstein', 1984, 'Microsoft@gmail.com', 'Baen')
+insert into BOOKS (ISBN, TITLE, YEAR_PUBLISHED, AUTHORING_ENTITY_NAME, PUBLISHER_NAME) values('01234567890', 'Harry_Potter', 1984, 'Billy@gmail.com', 'Flashlight_Press')
