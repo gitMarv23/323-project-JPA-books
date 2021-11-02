@@ -77,6 +77,7 @@ public class Library {
       tx.begin();
 
       System.out.println("Welcome to JPA Books!");
+      //This variable is used to keep the user inside of the program
       boolean userLeaves = false;
       while(!userLeaves) {
          System.out.println("Please select what you want to do today. Make absolutely sure that you enter '1', and nothing more. " +
@@ -87,6 +88,7 @@ public class Library {
                  "4. Update a Book\n" +
                  "5. List primary keys of all rows\n" +
                  "Anything Else: Exit Program");
+         //Used to determine where in the program we go based on input
          String userChoice = input.nextLine();
          switch (userChoice){
             case "1":
@@ -94,8 +96,7 @@ public class Library {
                        "1. Authoring Entity Instance\n" +
                        "2. Add a new Publisher\n" +
                        "3. Add a new Book");
-               userChoice = input.next();
-               input.nextLine();
+               userChoice = input.nextLine();
                switch (userChoice){
                   case "1":
                      library.authoringMenu();
@@ -106,15 +107,14 @@ public class Library {
                   case "3":
                      library.addBook();
                      break;
-               }
+               }//end of switch case for adding a new object
                break;
             case "2":
                System.out.println("List all the Information about a Specific Object\n" +
                        "1. Publisher\n" +
                        "2. Book\n" +
                        "3. Writing Group\n");
-               userChoice = input.next();
-               input.nextLine();
+               userChoice = input.nextLine();
                switch (userChoice){
                   case "1":
                      System.out.println("List Publisher information");
@@ -126,6 +126,7 @@ public class Library {
                      break;
                   case "3":
                      System.out.println("List Writing Group Information");
+                     //make sure user
                      boolean userCheck = false;
                      while(!userCheck) {
                         List<WritingGroups> writingGroups = library.entityManager.createNamedQuery("ReturnAllWriting",
@@ -160,8 +161,7 @@ public class Library {
                        "1. Publisher Keys\n" +
                        "2. Books Keys\n" +
                        "3. Authoring Entities Keys (Includes Authoring Entity Type)");
-               userChoice = input.next();
-               input.nextLine();
+               userChoice = input.nextLine();
                switch (userChoice){
                   case "1":
                      System.out.println("List Publisher Keys");
@@ -298,7 +298,6 @@ public class Library {
     * Adds an Ad Hoc Team entity to the database utilizing JPA Annotations from associated classes.
     * Will Prompt user for necessary input prior to executing Native Class Queries and other necessary functionalities
     */
-   //TODO: complete function operability
    public void addAdHocTeam(){
       boolean nameCheck = false;
       while(!nameCheck) {
@@ -331,14 +330,13 @@ public class Library {
     * Subsequent to inclusion, the database utilizing JPA Annotations from associated classes is updated.
     * Will Prompt user for necessary input prior to executing Native Class Queries and other necessary functionalities
     */
-   //TODO: complete function operability
    public void addAuthorToAdHoc(){
       boolean nameCheck = false;
       while(!nameCheck) {
          List<Individual_Authors> individualAuthors = this.entityManager.createNamedQuery("ReturnAllIndividualAuthors",
                  Individual_Authors.class).getResultList();
          for(Individual_Authors individual_author : individualAuthors){
-            System.out.println(individual_author.toString());
+            System.out.println("Individual Authors: "+individual_author.toString());
          }
          System.out.println("Which email of the author needs to be added to an ad hoc team?");
          String userEmail = input.nextLine();
@@ -349,7 +347,7 @@ public class Library {
                List<Ad_Hoc_Teams_Members> adHocTeamsMembers = this.entityManager.createNamedQuery("ReturnAllAdHocTeamMembers",
                        Ad_Hoc_Teams_Members.class).getResultList();
                for(Ad_Hoc_Teams_Members ad_hoc_teams_members : adHocTeamsMembers){
-                  System.out.println(ad_hoc_teams_members.toString());
+                  System.out.println("Ad Hoc Team Members: "+ad_hoc_teams_members.toString());
                }
                System.out.println("What is the email of the ad hoc team you want to add the author to?");
                String userAdHocEmail = input.nextLine();
@@ -387,7 +385,7 @@ public class Library {
    public boolean displayAllAuthoring_EntitiesPK(){
       try {
          for (Authoring_Entities author : this.entityManager.createNamedQuery("ReturnAllAuthors", Authoring_Entities.class).getResultList()) {
-            System.out.println(author.toString());
+            System.out.println("Author Email: "+author.getEmail() + "   Author Writing Type: " + author.getDiscriminatorValue());
          }
          return true;
       }
@@ -444,8 +442,7 @@ public class Library {
       while(!userChoice){
          this.displayAllBookPK();
          System.out.println("Please enter the ISBN of the book you would like");
-         String userBook = input.next();
-         input.nextLine();
+         String userBook = input.nextLine();
          List<Books> book = this.entityManager.createNamedQuery("ReturnBook",Books.class).setParameter(1,userBook).getResultList();
          if(book.size()==0){
             System.out.println("Sorry, you entered an invalid publisher name.");
@@ -465,8 +462,7 @@ public class Library {
       boolean bookCheck = false;
       while(!bookCheck) {
          System.out.println("What is the ISBN of the new book?");
-         String userISBN = input.next();
-         input.nextLine();
+         String userISBN = input.nextLine();
          try{
             List<Books> book = this.entityManager.createNamedQuery("ReturnBook",
                     Books.class).setParameter(1, userISBN).getResultList();
@@ -503,7 +499,7 @@ public class Library {
          boolean userChoice = false;
          while (!userChoice) {
             for (Books book : booksList) {
-               System.out.println(book.toString());
+               System.out.println("Books: "+book.toString());
             }
             System.out.println("Please enter the ISBN of the book you want to delete.");
             String userName = input.nextLine();
@@ -515,7 +511,6 @@ public class Library {
                }
                else {
                   System.out.println("ISBN has been successfully deleted.");
-                  //TODO: FIX DELETE
                   this.entityManager.remove(entityManager.find(Books.class, userName));
                   userChoice = true;
                }
@@ -602,8 +597,7 @@ public class Library {
       while(!userChoice){
          this.displayAllPublisherPK();
          System.out.println("Please enter the name of the publisher you want to select.");
-         String userPublisher = input.next();
-         input.nextLine();
+         String userPublisher = input.nextLine();
          List<Publishers> publisher = this.entityManager.createNamedQuery("ReturnPublisher",Publishers.class).setParameter(1,userPublisher).getResultList();
          if(publisher.size()==0){
             System.out.println("Sorry, you entered an invalid publisher name.");
@@ -623,19 +617,16 @@ public class Library {
       boolean nameCheck = false;
       while(!nameCheck) {
          System.out.println("What is the name of the new publisher?");
-         String userName = input.next();
-         input.nextLine();
+         String userName = input.nextLine();
          try{
             List<Publishers> publisher = this.entityManager.createNamedQuery("ReturnPublisher",
                     Publishers.class).setParameter(1, userName).getResultList();
             if (publisher.size() == 0) {
                nameCheck= true;
                System.out.println("What is the email of the publisher?");
-               String userEmail = input.next();
-               input.nextLine();
+               String userEmail = input.nextLine();
                System.out.println("What is the phone number?");
-               String userPhone = input.next();
-               input.nextLine();
+               String userPhone = input.nextLine();
                ArrayList<Publishers> userPublisher = new ArrayList<Publishers>();
                userPublisher.add(new Publishers(userName,userEmail,userPhone));
                this.createEntity(userPublisher);

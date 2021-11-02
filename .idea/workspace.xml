@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="Finalized Functionality of program">
+    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="Fixed add to ad hoc team">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" afterDir="false" />
     </list>
-    <list id="71e61f36-2f48-437d-a43b-a14ab289baa3" name="Changes by George Vargas" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" afterDir="false" />
-    </list>
+    <list id="71e61f36-2f48-437d-a43b-a14ab289baa3" name="Changes by George Vargas" comment="" />
     <list id="e50bf78b-095a-4b50-8f4b-1bb291197f1a" name="Changes by marvin" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Books.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Books.java" afterDir="false" />
@@ -87,14 +85,29 @@
         <range start1="32" end1="33" start2="32" end2="32" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
         <range start1="59" end1="60" start2="58" end2="59" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
         <range start1="65" end1="66" start2="64" end2="64" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
-        <range start1="300" end1="301" start2="298" end2="298" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
-        <range start1="333" end1="334" start2="330" end2="330" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
-        <range start1="340" end1="341" start2="336" end2="337" changelist="71e61f36-2f48-437d-a43b-a14ab289baa3" />
-        <range start1="351" end1="352" start2="347" end2="348" changelist="71e61f36-2f48-437d-a43b-a14ab289baa3" />
-        <range start1="358" end1="361" start2="354" end2="362" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
-        <range start1="384" end1="385" start2="385" end2="386" changelist="71e61f36-2f48-437d-a43b-a14ab289baa3" />
-        <range start1="500" end1="501" start2="501" end2="502" changelist="71e61f36-2f48-437d-a43b-a14ab289baa3" />
-        <range start1="512" end1="513" start2="513" end2="513" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
+        <range start1="79" end1="79" start2="77" end2="78" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="89" end1="89" start2="88" end2="89" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="96" end1="98" start2="96" end2="97" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="108" end1="109" start2="107" end2="108" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="115" end1="117" start2="114" end2="115" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="128" end1="128" start2="126" end2="127" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="162" end1="164" start2="161" end2="162" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="300" end1="301" start2="298" end2="298" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="333" end1="334" start2="330" end2="330" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="340" end1="341" start2="336" end2="337" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="351" end1="352" start2="347" end2="348" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="389" end1="390" start2="385" end2="386" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="404" end1="405" start2="400" end2="400" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
+        <range start1="441" end1="441" start2="436" end2="440" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
+        <range start1="446" end1="448" start2="445" end2="446" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="457" end1="458" start2="455" end2="456" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
+        <range start1="467" end1="469" start2="465" end2="466" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="505" end1="506" start2="502" end2="503" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="517" end1="518" start2="514" end2="514" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="604" end1="606" start2="600" end2="601" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="625" end1="627" start2="620" end2="621" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="633" end1="635" start2="627" end2="628" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="636" end1="638" start2="629" end2="630" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
       </ranges>
     </file>
   </component>
@@ -252,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635877811966</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fixed add to ad hoc team">
+      <created>1635878460669</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1635878460669</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,7 +299,8 @@
     <MESSAGE value="AddAuthorToAdHoc and AdhocTeams created" />
     <MESSAGE value="Worked on delete book(WIP) not working" />
     <MESSAGE value="Finalized Functionality of program" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finalized Functionality of program" />
+    <MESSAGE value="Fixed add to ad hoc team" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed add to ad hoc team" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
