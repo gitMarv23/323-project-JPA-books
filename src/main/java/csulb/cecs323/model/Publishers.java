@@ -62,7 +62,7 @@ public class Publishers {
     }
 
     // one to many reevaluation since relation scheme changed with publisher_name pk to foreign_key in books
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "publisherName", cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "publisherName", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private List<Books> books;
 
     /**
