@@ -10,8 +10,22 @@ import java.util.*;
  * This input is used for
  */
 @Entity
+@NamedNativeQuery(
+        name="ReturnAdHocTeamMember",
+        query = "SELECT * " +
+                "FROM   AUTHORING_ENTITIES " +
+                "WHERE AUTHORING_ENTITY_TYPE = 'AD Hoc Teams' and EMAIL = ? ",
+        resultClass = Ad_Hoc_Teams_Members.class
+)
+@NamedNativeQuery(
+        name="ReturnAllAdHocTeamMembers",
+        query = "SELECT * " +
+                "FROM   AUTHORING_ENTITIES "+
+                "WHERE AUTHORING_ENTITY_TYPE = 'AD Hoc Teams' ",
+        resultClass = Ad_Hoc_Teams_Members.class
+)
 @DiscriminatorValue("AD Hoc Teams")
-public class AdHocTeams extends Authoring_Entities{
+public class Ad_Hoc_Teams_Members extends Authoring_Entities{
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(
             name = "Ad_hoc_teams_member",
@@ -23,20 +37,24 @@ public class AdHocTeams extends Authoring_Entities{
     /**
      * This input is used for
      * */
-    public AdHocTeams(){
+    public Ad_Hoc_Teams_Members(){
 
     }
 
     /**
      * This input is used for
      * */
-    public AdHocTeams(String name,String email){
-        super(name,email);
+    public Ad_Hoc_Teams_Members(String email, String name){
+        super(email,name);
         this.individual_authors = new ArrayList<Individual_Authors>();
     }
 
     public List<Individual_Authors> getIndividualAuthors(){
         return this.individual_authors;
+    }
+
+    public void addIndividualAuthors(Individual_Authors author){
+        individual_authors.add(author);
     }
 
 }

@@ -293,16 +293,16 @@ public class Library {
          String userName = input.next();
          input.nextLine();
          try{
-            List<Individual_Authors> individualAuthors = this.entityManager.createNamedQuery("ReturnPublisher",
-                    Individual_Authors.class).setParameter(1, userName).getResultList();
-            if (individualAuthors.size() == 0) {
+            List<Ad_Hoc_Teams_Members> adHocTeamMember = this.entityManager.createNamedQuery("ReturnAdHocTeamMember",
+                    Ad_Hoc_Teams_Members.class).setParameter(1, userName).getResultList();
+            if (adHocTeamMember.size() == 0) {
                nameCheck= true;
                System.out.println("What is the email of " + userName + "?");
                String userEmail = input.next();
                input.nextLine();
-               ArrayList<Individual_Authors> userAuthor = new ArrayList<Individual_Authors>();
-               userAuthor.add(new Individual_Authors(userEmail,userName));
-               this.createEntity(userAuthor);
+               ArrayList<Ad_Hoc_Teams_Members> adHocTeam = new ArrayList<Ad_Hoc_Teams_Members>();
+               adHocTeam.add(new Ad_Hoc_Teams_Members(userEmail,userName));
+               this.createEntity(adHocTeam);
             } // end of if statement
             else{
                System.out.println("Sorry, there already is a publisher under that name.");
@@ -321,7 +321,47 @@ public class Library {
     */
    //TODO: complete function operability
    public void addAuthorToAdHoc(){
-
+      boolean nameCheck = false;
+      while(!nameCheck) {
+         List<Individual_Authors> individualAuthors = this.entityManager.createNamedQuery("ReturnAllIndividualAuthors",
+                 Individual_Authors.class).getResultList();
+         for(Individual_Authors individual_author : individualAuthors){
+            System.out.println(individual_author.toString());
+         }
+         System.out.println("Which email of the author needs to be added to an ad hoc team?");
+         String userEmail = input.next();
+         input.nextLine();
+         try{
+            List<Individual_Authors> adHocTeamMember = this.entityManager.createNamedQuery("ReturnIndividualAuthor",
+                    Individual_Authors.class).setParameter(1, userEmail).getResultList();
+            if (adHocTeamMember.size() != 0) {
+               List<Ad_Hoc_Teams_Members> adHocTeamsMembers = this.entityManager.createNamedQuery("ReturnAllAdHocTeamMembers",
+                       Ad_Hoc_Teams_Members.class).getResultList();
+               for(Ad_Hoc_Teams_Members ad_hoc_teams_members : adHocTeamsMembers){
+                  System.out.println(ad_hoc_teams_members.toString());
+               }
+               System.out.println("What is the email of the ad hoc team you want to add the author to?");
+               String userAdHocEmail = input.next();
+               List<Ad_Hoc_Teams_Members> adHocTeam = this.entityManager.createNamedQuery("ReturnAdHocTeamMember",
+                       Ad_Hoc_Teams_Members.class).setParameter(1, userAdHocEmail).getResultList();
+               if(adHocTeam.size()!=0){
+                  nameCheck= true;
+                  input.nextLine();
+                  adHocTeam.get(0).addIndividualAuthors(adHocTeamMember.get(0));
+                  this.createEntity(adHocTeam);
+               }
+               else{
+                  System.out.println("Sorry, can't find anything related to the email of the ad hoc team");
+               }
+            } // end of if statement
+            else{
+               System.out.println("Sorry, there already is a publisher under that name.");
+            }
+         }
+         catch(Exception e){
+            System.out.println("Sorry, someone by that name already exists.");
+         }
+      }
    } // end of addAuthorToAdHoc
 
    /**
