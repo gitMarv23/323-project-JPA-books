@@ -9,6 +9,7 @@ import java.util.*;
 /**
  * This input is used for
  */
+
 @Entity
 @NamedNativeQuery(
         name="ReturnAdHocTeamMember",

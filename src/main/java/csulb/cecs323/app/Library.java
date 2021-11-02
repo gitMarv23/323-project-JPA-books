@@ -268,6 +268,7 @@ public class Library {
                nameCheck= true;
                System.out.println("What is the name of the author?");
                String userName = input.nextLine();
+
                ArrayList<Individual_Authors> userAuthor = new ArrayList<Individual_Authors>();
                userAuthor.add(new Individual_Authors(userEmail,userName));
                this.createEntity(userAuthor);
@@ -299,6 +300,7 @@ public class Library {
                nameCheck= true;
                System.out.println("What is the name of the Ad Hoc Team?");
                String userName = input.nextLine();
+
                ArrayList<Ad_Hoc_Teams_Members> adHocTeam = new ArrayList<Ad_Hoc_Teams_Members>();
                adHocTeam.add(new Ad_Hoc_Teams_Members(userEmail,userName));
                this.createEntity(adHocTeam);
@@ -479,6 +481,7 @@ public class Library {
                }
                else {
                   System.out.println("ISBN has been successfully deleted.");
+                  //TODO: FIX DELETE
                   this.entityManager.remove(entityManager.find(Books.class, userName));
                   userChoice = true;
                }
