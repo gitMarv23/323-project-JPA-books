@@ -356,9 +356,14 @@ public class Library {
                List<Ad_Hoc_Teams_Members> adHocTeam = this.entityManager.createNamedQuery("ReturnAdHocTeamMember",
                        Ad_Hoc_Teams_Members.class).setParameter(1, userAdHocEmail).getResultList();
                if(adHocTeam.size()!=0){
-                  nameCheck= true;
-                  adHocTeam.get(0).addIndividualAuthors(adHocTeamMember.get(0));
-                  this.createEntity(adHocTeam);
+                  if(adHocTeam.get(0).getIndividualAuthors().contains(adHocTeamMember.get(0))) {
+                     System.out.println("You already have an individual under that ad hoc team.");
+                  }
+                  else {
+                     nameCheck= true;
+                     adHocTeam.get(0).addIndividualAuthors(adHocTeamMember.get(0));
+                     this.createEntity(adHocTeam);
+                  }
                }
                else{
                   System.out.println("Sorry, can't find anything related to the email of the ad hoc team");
