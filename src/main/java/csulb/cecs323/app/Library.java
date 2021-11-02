@@ -131,7 +131,7 @@ public class Library {
                                 WritingGroups.class).getResultList(); //gets all of the writing groups from the database
                         for (WritingGroups writing : writingGroups) { //displays all writing group's email
                            System.out.println("Writing Email: " + writing.getEmail());
-                        }
+                        }//end of for loop that displays all writing emails
                         System.out.println("Please enter in one of the writing emails displayed");
                         String userEmail = input.nextLine();//user puts in the email
                         //author is supposed to save whatever rows it returns for userEmail is inside the tables of writing groups
