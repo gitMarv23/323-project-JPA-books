@@ -11,6 +11,13 @@ import java.util.*;
  * Relation scheme Foreign Key connection via author's email address
  */
 @Entity
+@NamedNativeQuery(
+        name="ReturnIndividualAuthor",
+        query = "SELECT * " +
+                "FROM   AUTHORING_ENTITIES " +
+                "WHERE  NAME = ? ",
+        resultClass = Individual_Authors.class
+)
 @DiscriminatorValue("Individual Authors")
 public class Individual_Authors extends  Authoring_Entities{
 
