@@ -117,16 +117,33 @@ public class Library {
                input.nextLine();
                switch (userChoice){
                   case "1":
-                     System.out.println("List Publisher Information");
-                     library.displayAllPublishers();
+                     System.out.println("List Publisher information");
+                     System.out.println( library.pickPublisher().toString());
                      break;
                   case "2":
                      System.out.println("List Book information");
-                     library.displayAllBooks();
+                     System.out.println(library.pickBook().toString());
                      break;
                   case "3":
-                     System.out.println("List Authoring Entity Information");
-                     library.displayAllAuthoring_Entities();
+                     System.out.println("List Writing Group Information");
+                     boolean userCheck = false;
+                     while(!userCheck) {
+                        List<WritingGroups> writingGroups = library.entityManager.createNamedQuery("ReturnAllWriting",
+                                WritingGroups.class).getResultList();
+                        for (WritingGroups writing : writingGroups) {
+                           System.out.println("Writing Email: " + writing.getEmail());
+                        }
+                        System.out.println("Please enter in one of the writing emails displayed");
+                        String userEmail = input.nextLine();
+                        List<WritingGroups> author = library.entityManager.createNamedQuery("ReturnWriting",WritingGroups.class).setParameter(1,userEmail).getResultList();
+                        if(author.size()==0){
+                           System.out.println("Sorry, you entered an invalid writing name name.");
+                        }
+                        else{
+                           userCheck = true;
+                           System.out.println(author.get(0).toString());
+                        }
+                     }
                      break;
                }
                break;
@@ -148,21 +165,15 @@ public class Library {
                switch (userChoice){
                   case "1":
                      System.out.println("List Publisher Keys");
-                     for(Publishers publisherPrimary : library.entityManager.createNamedQuery("ReturnAllPublisher", Publishers.class).getResultList()){
-                        System.out.println(publisherPrimary.getName());
-                     }
+                     library.displayAllPublisherPK();
                      break;
                   case "2":
                      System.out.println("List Books Keys");
-                     for(Books bookPrimary : library.entityManager.createNamedQuery("ReturnAllBooks", Books.class).getResultList()){
-                        System.out.println(bookPrimary.getISBN());
-                     }
+                     library.displayAllBookPK();
                      break;
                   case "3":
                      System.out.println("List Authoring Entities Keys");
-                     for(Authoring_Entities authoringPrimary: library.entityManager.createNamedQuery("ReturnAllAuthors", Authoring_Entities.class).getResultList()){
-                        System.out.println(authoringPrimary.getEmail());
-                     }
+                     library.displayAllAuthoring_EntitiesPK();
                      break;
                }
                break;
@@ -368,7 +379,7 @@ public class Library {
     * @return true if table contains existing Authoring Entities
     * @return false with console output message if no Authoring Entities are found
     * */
-   public boolean displayAllAuthoring_Entities(){
+   public boolean displayAllAuthoring_EntitiesPK(){
       try {
          for (Authoring_Entities author : this.entityManager.createNamedQuery("ReturnAllAuthors", Authoring_Entities.class).getResultList()) {
             System.out.println(author.toString());
@@ -391,7 +402,7 @@ public class Library {
    public Authoring_Entities pickAuthoringEntity(){
       boolean userChoice = false;
       while(!userChoice){
-         this.displayAllAuthoring_Entities();
+         this.displayAllAuthoring_EntitiesPK();
          System.out.println("Please enter the email of the author you want to pick.");
          String userAuthor = input.nextLine();
          List<Authoring_Entities> author = this.entityManager.createNamedQuery("ReturnAuthor",Authoring_Entities.class).setParameter(1,userAuthor).getResultList();
@@ -410,10 +421,10 @@ public class Library {
     * @return true and all information related to current books in database
     * @return false if no books found
     */
-   public boolean displayAllBooks(){
+   public boolean displayAllBookPK(){
       try {
          for (Books book : this.entityManager.createNamedQuery("ReturnAllBooks", Books.class).getResultList()) {
-            System.out.println(book.toString());
+            System.out.println("Book ISBN: " + book.getISBN());
          }
          return true;
       }
@@ -422,6 +433,24 @@ public class Library {
          return false;
       }
    } // end of displayAllBooks
+
+   public Books pickBook(){
+      boolean userChoice = false;
+      while(!userChoice){
+         this.displayAllBookPK();
+         System.out.println("Please enter the ISBN of the book you would like");
+         String userBook = input.next();
+         input.nextLine();
+         List<Books> book = this.entityManager.createNamedQuery("ReturnBook",Books.class).setParameter(1,userBook).getResultList();
+         if(book.size()==0){
+            System.out.println("Sorry, you entered an invalid publisher name.");
+         }
+         else{
+            return book.get(0);
+         }
+      }
+      return null;
+   } // end of pickPublisher
 
    /**
     * Adds a Book entity to the database utilizing JPA Annotations from associated classes.
@@ -545,10 +574,10 @@ public class Library {
     * @return true if Publishers exist and display current entities
     * @return false if no Publishers found
     */
-   public boolean displayAllPublishers(){
+   public boolean displayAllPublisherPK(){
       try {
          for (Publishers publisher : this.entityManager.createNamedQuery("ReturnAllPublisher", Publishers.class).getResultList()) {
-            System.out.println(publisher.toString());
+            System.out.println("Publisher Name: " + publisher.getName());
          }
          return true;
       }
@@ -566,7 +595,7 @@ public class Library {
    public Publishers pickPublisher(){
       boolean userChoice = false;
       while(!userChoice){
-         this.displayAllPublishers();
+         this.displayAllPublisherPK();
          System.out.println("Please enter the name of the publisher you want to select.");
          String userPublisher = input.next();
          input.nextLine();

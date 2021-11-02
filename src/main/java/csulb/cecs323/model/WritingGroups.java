@@ -10,7 +10,7 @@ import java.util.List;
         name="ReturnWriting",
         query = "SELECT * " +
                 "FROM   AUTHORING_ENTITIES " +
-                "WHERE  AUTHORING_ENTITY_TYPE = 'Writing Group' and HEAD_WRITER = ?",
+                "WHERE  AUTHORING_ENTITY_TYPE = 'Writing Group' and EMAIL = ?",
         resultClass = WritingGroups.class
 )
 @NamedNativeQuery(
@@ -61,5 +61,12 @@ public class WritingGroups extends Authoring_Entities{
         this.year_Formed = yearFormed;
     }
 
-
+    @Override
+    public String toString() {
+        return "WritingGroups - " +
+                "Email: " + super.getEmail() +
+                "   Name: " + super.getName() +
+                "   Head Writer: " + head_Writer +
+                "   Year Formed=" + year_Formed;
+    }
 }

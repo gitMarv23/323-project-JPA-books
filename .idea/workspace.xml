@@ -4,12 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="Worked on delete book(WIP) not working">
+    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="Update book and other validations">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Authoring_Entities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Authoring_Entities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Books.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Books.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Individual_Authors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Individual_Authors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Publishers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Publishers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/WritingGroups.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/WritingGroups.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/seed-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/seed-data.sql" afterDir="false" />
+    </list>
+    <list id="71e61f36-2f48-437d-a43b-a14ab289baa3" name="Changes by George Vargas" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" afterDir="false" />
+    </list>
+    <list id="e50bf78b-095a-4b50-8f4b-1bb291197f1a" name="Changes by marvin" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Books.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Books.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +86,56 @@
       </map>
     </option>
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Books.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="5" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
+        <range start1="5" end1="8" start2="8" end2="8" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
+        <range start1="26" end1="26" start2="26" end2="31" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
+        <range start1="28" end1="28" start2="33" end2="36" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
+        <range start1="32" end1="32" start2="40" end2="43" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
+        <range start1="35" end1="35" start2="46" end2="49" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
+        <range start1="37" end1="38" start2="51" end2="56" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
+        <range start1="40" end1="41" start2="58" end2="59" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
+        <range start1="42" end1="42" start2="60" end2="63" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
+        <range start1="46" end1="46" start2="67" end2="70" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
+        <range start1="51" end1="52" start2="75" end2="76" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
+        <range start1="54" end1="54" start2="78" end2="79" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
+        <range start1="55" end1="57" start2="80" end2="84" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
+        <range start1="59" end1="60" start2="86" end2="87" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
+        <range start1="61" end1="61" start2="88" end2="92" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
+        <range start1="63" end1="64" start2="94" end2="95" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
+        <range start1="66" end1="68" start2="97" end2="104" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
+        <range start1="74" end1="74" start2="110" end2="111" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
+        <range start1="75" end1="77" start2="112" end2="115" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
+        <range start1="79" end1="80" start2="117" end2="118" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="83" end1="85" start2="121" end2="122" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java">
+      <ranges>
+        <range start1="59" end1="60" start2="59" end2="60" changelist="e50bf78b-095a-4b50-8f4b-1bb291197f1a" />
+        <range start1="119" end1="121" start2="119" end2="121" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="124" end1="125" start2="124" end2="125" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="127" end1="129" start2="127" end2="146" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="150" end1="153" start2="167" end2="168" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="156" end1="159" start2="171" end2="172" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="162" end1="165" start2="175" end2="176" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="329" end1="330" start2="340" end2="341" changelist="71e61f36-2f48-437d-a43b-a14ab289baa3" />
+        <range start1="340" end1="341" start2="351" end2="352" changelist="71e61f36-2f48-437d-a43b-a14ab289baa3" />
+        <range start1="370" end1="371" start2="381" end2="382" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="373" end1="374" start2="384" end2="385" changelist="71e61f36-2f48-437d-a43b-a14ab289baa3" />
+        <range start1="393" end1="394" start2="404" end2="405" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="412" end1="413" start2="423" end2="424" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="415" end1="416" start2="426" end2="427" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="424" end1="424" start2="435" end2="453" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="471" end1="472" start2="500" end2="501" changelist="71e61f36-2f48-437d-a43b-a14ab289baa3" />
+        <range start1="547" end1="548" start2="576" end2="577" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="550" end1="551" start2="579" end2="580" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+        <range start1="568" end1="569" start2="597" end2="598" changelist="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProjectId" id="1zcB5oovxI8CpaiGFVcvLEWykNc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -140,13 +199,18 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.CarClub" />
+      <item itemvalue="Application.Library" />
+      <item itemvalue="Database Script.Books.sql" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Library" />
         <item itemvalue="Database Script.Books.sql" />
         <item itemvalue="Application.CarClub" />
-        <item itemvalue="Database Script.Books.sql" />
         <item itemvalue="Application.Library" />
+        <item itemvalue="Database Script.Books.sql" />
       </list>
     </recent_temporary>
   </component>
@@ -251,7 +315,6 @@
     <MESSAGE value="Fixed issues with Authoring_Entities" />
     <MESSAGE value="Fixed Individual_Authors" />
     <MESSAGE value="AddAuthorToAdHoc and AdhocTeams created" />
-    <option name="LAST_COMMIT_MESSAGE" value="AddAuthorToAdHoc and AdhocTeams created" />
     <MESSAGE value="Worked on delete book(WIP) not working" />
     <option name="LAST_COMMIT_MESSAGE" value="Worked on delete book(WIP) not working" />
   </component>

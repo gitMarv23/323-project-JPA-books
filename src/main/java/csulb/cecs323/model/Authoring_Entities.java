@@ -34,9 +34,20 @@ public abstract class Authoring_Entities {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "authoringName", cascade = CascadeType.PERSIST)
     private List<Books> books;
 
+    @Transient
+    public String getDiscriminatorValue(){
+        DiscriminatorValue val = this.getClass().getAnnotation( DiscriminatorValue.class );
+
+        return val == null ? null : val.value();
+    }
+
 
     public Authoring_Entities() {
 
+    }
+
+    public String getName() {
+        return name;
     }
 
     public Authoring_Entities(String email, String name){

@@ -77,7 +77,7 @@ public class Books {
 
     @Override
     public String toString() {
-        return "Books - Name: " + ISBN + "   Title: " + title +
+        return "Books - ISBN: " + ISBN + "   Title: " + title +
                 "   Year Published: " + yearPublished +
                 "   Authoring Email: " + authoringName.getEmail() +
                 "   Publisher Name: " + publisherName.getName();
