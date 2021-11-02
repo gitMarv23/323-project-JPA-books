@@ -35,6 +35,7 @@ public class Individual_Authors extends  Authoring_Entities{
     //TODO: support hour fix
     @ManyToMany(mappedBy = "individual_authors",
             cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+
     private List<Ad_Hoc_Teams_Members> adHocTeamMembers;
 
     /**
