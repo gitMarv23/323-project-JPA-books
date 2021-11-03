@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="Authoring_entities javadoc done!">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Ad_Hoc_Teams_Members.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Ad_Hoc_Teams_Members.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Books.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Books.java" afterDir="false" />
+    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="Library in line comments done">
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" afterDir="false" />
     </list>
-    <list id="71e61f36-2f48-437d-a43b-a14ab289baa3" name="Changes by George Vargas" comment="" />
-    <list id="e50bf78b-095a-4b50-8f4b-1bb291197f1a" name="Changes by marvin" comment="" />
+    <list id="e50bf78b-095a-4b50-8f4b-1bb291197f1a" name="Changes by marvin" comment="Changes by marvin" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,11 +33,12 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Lawrence" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitRewordedCommitMessages">
     <option name="commitMessagesMapping">
@@ -180,7 +178,6 @@
       <workItem from="1635740004075" duration="5713000" />
       <workItem from="1635810494558" duration="7807000" />
       <workItem from="1635819247972" duration="285000" />
-      <workItem from="1635912558067" duration="1489000" />
     </task>
     <task id="LOCAL-00001" summary="jpa mini hw template">
       <created>1634443331775</created>
@@ -238,21 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635878460669</updated>
     </task>
-    <task id="LOCAL-00009" summary="javadoc done for Library">
-      <created>1635880030745</created>
+    <task id="LOCAL-00009" summary="Library in line comments done">
+      <created>1635885264711</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1635880030745</updated>
+      <updated>1635885264711</updated>
     </task>
-    <task id="LOCAL-00010" summary="Authoring_entities javadoc done!">
-      <created>1635913524971</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1635913524971</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,9 +270,8 @@
     <MESSAGE value="Worked on delete book(WIP) not working" />
     <MESSAGE value="Finalized Functionality of program" />
     <MESSAGE value="Fixed add to ad hoc team" />
-    <MESSAGE value="javadoc done for Library" />
-    <MESSAGE value="Authoring_entities javadoc done!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Authoring_entities javadoc done!" />
+    <MESSAGE value="Library in line comments done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Library in line comments done" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
