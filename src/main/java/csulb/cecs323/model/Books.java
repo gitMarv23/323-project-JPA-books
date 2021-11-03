@@ -112,6 +112,7 @@ public class Books {
 
     /**
      * OverloadedToString function to display all information from given Book instance
+     * @return  Book ISBN, title, year of publication, authoring entity name and publisher name
      */
     @Override
     public String toString() {

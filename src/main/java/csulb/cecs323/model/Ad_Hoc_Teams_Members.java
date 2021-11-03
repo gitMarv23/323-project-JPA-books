@@ -7,9 +7,8 @@ import javax.persistence.*;
 import java.util.*;
 
 /**
- * This input is used for
+ * Ad Hoc Team Authoring Entity to publish Books objects
  */
-
 @Entity
 @NamedNativeQuery(
         name="ReturnAdHocTeamMember",
@@ -27,6 +26,9 @@ import java.util.*;
 )
 @DiscriminatorValue("AD Hoc Teams")
 public class Ad_Hoc_Teams_Members extends Authoring_Entities{
+    /**
+     * List of each individual author involved in the Ad Hoc Team
+     */
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(
             name = "Ad_hoc_teams_member",
@@ -36,26 +38,35 @@ public class Ad_Hoc_Teams_Members extends Authoring_Entities{
     private List<Individual_Authors> individual_authors;
 
     /**
-     * This input is used for
-     * */
+     * Ad_Hoc_Teams_Members default constructor
+     */
     public Ad_Hoc_Teams_Members(){
 
-    }
+    } // end of default constructor
 
     /**
-     * This input is used for
-     * */
+     * Overloaded default constructor to assign existing team member's email and name
+     * @param email existing team member email
+     * @param name  existing team member name
+     */
     public Ad_Hoc_Teams_Members(String email, String name){
         super(email,name);
         this.individual_authors = new ArrayList<Individual_Authors>();
-    }
+    } // end of overloaded constructor
 
+    /**
+     * Get list of individual authors involved in Ad Hoc Team
+     * @return  list of individual authors involved in Ad Hoc Team
+     */
     public List<Individual_Authors> getIndividualAuthors(){
         return this.individual_authors;
-    }
+    } // end of getIndividualAuthors
 
+    /**
+     * Add individual authors to the Ad Hoc Team instance
+     */
     public void addIndividualAuthors(Individual_Authors author){
         individual_authors.add(author);
-    }
+    } // end of addIndividualAuthors
 
 }
