@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="Library in line comments done">
-      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" afterDir="false" />
+    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="Library in line comments done part 2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Publishers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Publishers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/WritingGroups.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/WritingGroups.java" afterDir="false" />
     </list>
     <list id="e50bf78b-095a-4b50-8f4b-1bb291197f1a" name="Changes by marvin" comment="Changes by marvin" />
     <option name="SHOW_DIALOG" value="false" />
@@ -178,6 +180,8 @@
       <workItem from="1635740004075" duration="5713000" />
       <workItem from="1635810494558" duration="7807000" />
       <workItem from="1635819247972" duration="285000" />
+      <workItem from="1635891065940" duration="101000" />
+      <workItem from="1635912125011" duration="2745000" />
     </task>
     <task id="LOCAL-00001" summary="jpa mini hw template">
       <created>1634443331775</created>
@@ -242,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635885264711</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Library in line comments done part 2">
+      <created>1635885376227</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1635885376227</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,7 +282,8 @@
     <MESSAGE value="Finalized Functionality of program" />
     <MESSAGE value="Fixed add to ad hoc team" />
     <MESSAGE value="Library in line comments done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Library in line comments done" />
+    <MESSAGE value="Library in line comments done part 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Library in line comments done part 2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
