@@ -45,10 +45,14 @@ public class Individual_Authors extends  Authoring_Entities{
 
     }
 
+    /**
+     * Output Individual Author information using the Authoring entity super class
+     * @return  information to output
+     */
     @Override
     public String toString() {
         return super.toString();
-    }
+    } // end of toString
 
     /**
      * Overloaded constructor to build an Individual Author with given.
