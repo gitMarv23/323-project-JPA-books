@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="Library in line comments done part 2">
+    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="Streamlines code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Ad_Hoc_Teams_Members.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Ad_Hoc_Teams_Members.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Authoring_Entities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Authoring_Entities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Books.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Books.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Individual_Authors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Individual_Authors.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Publishers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Publishers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/WritingGroups.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/WritingGroups.java" afterDir="false" />
     </list>
@@ -29,36 +34,14 @@
       </set>
     </option>
   </component>
-  <component name="Git.Rebase.Settings">
-    <option name="NEW_BASE" value="Lawrence" />
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Lawrence" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
-    <option name="UPDATE_TYPE" value="REBASE" />
-  </component>
-  <component name="GitRewordedCommitMessages">
-    <option name="commitMessagesMapping">
-      <RewordedCommitMessageMapping>
-        <option name="originalMessage" value="marvin wipe and rebuild based on brown's recommendations" />
-        <option name="rewordedMessage" value="marvin wipe and rebuild based on brown's recommendations&#10;&#10;&#10;marvin wipe and rebuild based on brown's recommendations" />
-      </RewordedCommitMessageMapping>
-    </option>
-    <option name="currentCommit" value="1" />
-    <option name="onto" value="22fc89869fc0f11a970c3b2008b9b3b43caaad34" />
-  </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -70,7 +53,7 @@
     </option>
     <option name="myId2Visible">
       <map>
-        <entry key="JPA Inspector" value="false" />
+        <entry key="JPA Inspector" value="true" />
         <entry key="JPA Palette" value="false" />
         <entry key="JPA Structure" value="false" />
       </map>
@@ -92,13 +75,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="jpb.reverseEngineering" />
   </component>
   <component name="RunManager" selected="Application.Library">
     <configuration name="CarClub" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -115,10 +97,8 @@
       </method>
     </configuration>
     <configuration name="Library" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="17" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="csulb.cecs323.app.Library" />
-      <module name="cecs323-jpa-CarClub" />
+      <module name="cecs323-jpa-Library" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="csulb.cecs323.app.*" />
@@ -141,15 +121,13 @@
     </configuration>
     <list>
       <item itemvalue="Application.CarClub" />
-      <item itemvalue="Application.Library" />
       <item itemvalue="Database Script.Books.sql" />
+      <item itemvalue="Application.Library" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Library" />
-        <item itemvalue="Database Script.Books.sql" />
         <item itemvalue="Application.CarClub" />
-        <item itemvalue="Application.Library" />
         <item itemvalue="Database Script.Books.sql" />
       </list>
     </recent_temporary>
@@ -164,24 +142,8 @@
       <updated>1634437315243</updated>
       <workItem from="1634437316801" duration="2840000" />
       <workItem from="1634441019496" duration="2458000" />
-      <workItem from="1634444457267" duration="516000" />
-      <workItem from="1634536494064" duration="72000" />
-      <workItem from="1634536615091" duration="3470000" />
-      <workItem from="1634547155349" duration="160000" />
-      <workItem from="1634577526978" duration="6436000" />
-      <workItem from="1634602944336" duration="373000" />
-      <workItem from="1635119608392" duration="4164000" />
-      <workItem from="1635124043277" duration="2269000" />
-      <workItem from="1635291780167" duration="4311000" />
-      <workItem from="1635298849481" duration="843000" />
-      <workItem from="1635365634899" duration="1988000" />
-      <workItem from="1635390855222" duration="1414000" />
-      <workItem from="1635392308124" duration="5489000" />
-      <workItem from="1635740004075" duration="5713000" />
-      <workItem from="1635810494558" duration="7807000" />
-      <workItem from="1635819247972" duration="285000" />
-      <workItem from="1635891065940" duration="101000" />
-      <workItem from="1635912125011" duration="2745000" />
+      <workItem from="1634444641150" duration="430000" />
+      <workItem from="1635915908056" duration="172000" />
     </task>
     <task id="LOCAL-00001" summary="jpa mini hw template">
       <created>1634443331775</created>
@@ -190,70 +152,7 @@
       <option name="project" value="LOCAL" />
       <updated>1634443331775</updated>
     </task>
-    <task id="LOCAL-00002" summary="marvin wipe and rebuild based on brown's recommendations">
-      <created>1634536775791</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1634536775791</updated>
-    </task>
-    <task id="LOCAL-00003" summary="marvin wipe and rebuild based on brown's recommendations">
-      <created>1634546782136</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1634546782136</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Fixed issues with Authoring_Entities">
-      <created>1635721586577</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1635721586577</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Fixed Individual_Authors">
-      <created>1635813030423</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1635813030424</updated>
-    </task>
-    <task id="LOCAL-00006" summary="AddAuthorToAdHoc and AdhocTeams created">
-      <created>1635815299057</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1635815299057</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Finalized Functionality of program">
-      <created>1635877811966</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1635877811966</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Fixed add to ad hoc team">
-      <created>1635878460669</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1635878460669</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Library in line comments done">
-      <created>1635885264711</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1635885264711</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Library in line comments done part 2">
-      <created>1635885376227</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1635885376227</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,19 +173,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="jpa mini hw template" />
-    <MESSAGE value="marvin wipe and rebuild based on brown's recommendations" />
-    <MESSAGE value="Fixed issues with Authoring_Entities" />
-    <MESSAGE value="Fixed Individual_Authors" />
-    <MESSAGE value="AddAuthorToAdHoc and AdhocTeams created" />
-    <MESSAGE value="Worked on delete book(WIP) not working" />
-    <MESSAGE value="Finalized Functionality of program" />
-    <MESSAGE value="Fixed add to ad hoc team" />
-    <MESSAGE value="Library in line comments done" />
-    <MESSAGE value="Library in line comments done part 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Library in line comments done part 2" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+    <option name="LAST_COMMIT_MESSAGE" value="jpa mini hw template" />
   </component>
 </project>

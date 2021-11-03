@@ -9,14 +9,14 @@ import java.util.List;
         @UniqueConstraint(name = "uc_publishers_email", columnNames = {"email", "phone"})
 })
 @NamedNativeQuery(
-        name="ReturnPublisher",
+        name = "ReturnPublisher",
         query = "SELECT * " +
                 "FROM   PUBLISHERS " +
                 "WHERE  PUBLISHER_NAME = ? ",
         resultClass = Publishers.class
 )
 @NamedNativeQuery(
-        name="ReturnAllPublisher",
+        name = "ReturnAllPublisher",
         query = "SELECT * " +
                 "FROM   PUBLISHERS ",
         resultClass = Publishers.class
@@ -50,7 +50,8 @@ public class Publishers {
 
     /**
      * Getter function to obtain the Book's given ISBN
-     * @return  book ISBN
+     *
+     * @return book ISBN
      */
     public String getName() {
         return name;
@@ -67,11 +68,12 @@ public class Publishers {
 
     /**
      * Publisher instance overloaded constructor based on user input from Library main.
-     * @param name          name of the publisher
-     * @param email         email of the publisher
-     * @param phone         phone number of the  publisher
+     *
+     * @param name  name of the publisher
+     * @param email email of the publisher
+     * @param phone phone number of the  publisher
      */
-    public Publishers(String name, String email, String phone){
+    public Publishers(String name, String email, String phone) {
         this.name = name;
         this.email = email;
         this.phone = phone;
@@ -79,17 +81,18 @@ public class Publishers {
 
     /**
      * Default constructor for current Publisher class
-     * */
-    public Publishers(){
+     */
+    public Publishers() {
 
     }
 
     /**
      * OverloadedToString function to display all information from given Publisher instance
-     * @return   the name, email and phone number of a given publisher
+     *
+     * @return the name, email and phone number of a given publisher
      */
     @Override
-    public String toString(){
+    public String toString() {
         return "Publishers - Name: " + this.name + "   Email: " + this.email +
                 "   Phone: " + this.phone;
     }
