@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>csulb.cecs323</groupId>
-	<artifactId>cecs323-project-JPA-books</artifactId>
+	<artifactId>cecs323-jpa-Library</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
 
@@ -62,7 +62,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>csulb.cecs323.app.CarClub</mainClass>
+							<mainClass>csulb.cecs323.app.Library</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
