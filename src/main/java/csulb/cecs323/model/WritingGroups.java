@@ -5,14 +5,14 @@ import java.util.List;
 
 
 @NamedNativeQuery(
-        name="ReturnWriting",
+        name = "ReturnWriting",
         query = "SELECT * " +
                 "FROM   AUTHORING_ENTITIES " +
                 "WHERE  AUTHORING_ENTITY_TYPE = 'Writing Group' and EMAIL = ?",
         resultClass = WritingGroups.class
 )
 @NamedNativeQuery(
-        name="ReturnAllWriting",
+        name = "ReturnAllWriting",
         query = "SELECT * " +
                 "FROM   AUTHORING_ENTITIES " +
                 "WHERE  AUTHORING_ENTITY_TYPE = 'Writing Group'",
@@ -25,7 +25,7 @@ import java.util.List;
  * This class will be directly represented as the head writer and year formed columns inside
  * the authoring entities table in the database
  */
-public class WritingGroups extends Authoring_Entities{
+public class WritingGroups extends Authoring_Entities {
 
     /**
      * List of the authoring entities that the Writing group happens to be in mapped by the email
@@ -49,7 +49,8 @@ public class WritingGroups extends Authoring_Entities{
 
     /**
      * Getter function to obtain the year formed
-     * @return  book ISBN
+     *
+     * @return book ISBN
      */
     public int getYear_Formed() {
         return year_Formed;
@@ -58,27 +59,29 @@ public class WritingGroups extends Authoring_Entities{
 
     /**
      * Default constructor for the current Writing Group CLass
-     * */
+     */
     public WritingGroups() {
 
     }
 
     /**
      * Publisher instance overloaded constructor based on user input from Library main.
-     * @param email        email of the writing group
-     * @param name         name of the writing group
-     * @param head_Writer         head writer name
-     * @param yearFormed    year that the writing group was formed
+     *
+     * @param email       email of the writing group
+     * @param name        name of the writing group
+     * @param head_Writer head writer name
+     * @param yearFormed  year that the writing group was formed
      */
-    public WritingGroups(String email, String name, String head_Writer, int yearFormed){
-        super(email,name);
+    public WritingGroups(String email, String name, String head_Writer, int yearFormed) {
+        super(email, name);
         this.head_Writer = head_Writer;
         this.year_Formed = yearFormed;
     }
 
     /**
      * Overloaded constructor to display all the information given of a WritingGroup instance
-     * @return   returns the email, name, headwriter and year formed of a specifc writing group
+     *
+     * @return returns the email, name, headwriter and year formed of a specifc writing group
      */
     @Override
     public String toString() {

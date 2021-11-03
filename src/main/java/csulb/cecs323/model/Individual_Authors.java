@@ -3,6 +3,7 @@ package csulb.cecs323.model;
 /**
  * Imports necessary for current project
  */
+
 import javax.persistence.*;
 import java.util.*;
 
@@ -12,21 +13,21 @@ import java.util.*;
  */
 @Entity
 @NamedNativeQuery(
-        name="ReturnIndividualAuthor",
+        name = "ReturnIndividualAuthor",
         query = "SELECT * " +
                 "FROM   AUTHORING_ENTITIES " +
                 "WHERE AUTHORING_ENTITY_TYPE = 'Individual Authors' and EMAIL = ? ",
         resultClass = Authoring_Entities.class
 )
 @NamedNativeQuery(
-        name="ReturnAllIndividualAuthors",
+        name = "ReturnAllIndividualAuthors",
         query = "SELECT * " +
-                "FROM   AUTHORING_ENTITIES "+
+                "FROM   AUTHORING_ENTITIES " +
                 "WHERE AUTHORING_ENTITY_TYPE = 'Individual Authors'",
         resultClass = Authoring_Entities.class
 )
 @DiscriminatorValue("Individual Authors")
-public class Individual_Authors extends  Authoring_Entities{
+public class Individual_Authors extends Authoring_Entities {
 
     /**
      * List of Ad Hoc Team the Individual Author will belong to.
@@ -47,7 +48,8 @@ public class Individual_Authors extends  Authoring_Entities{
 
     /**
      * Output Individual Author information using the Authoring entity super class
-     * @return  information to output
+     *
+     * @return information to output
      */
     @Override
     public String toString() {
@@ -57,11 +59,12 @@ public class Individual_Authors extends  Authoring_Entities{
     /**
      * Overloaded constructor to build an Individual Author with given.
      * Creates Ad Hoc Teams List to represent team author will be a part of if applicable.
+     *
      * @param email Email Address inputted by the user.
      * @param name  Individual author name to be inputted by user.1
      */
-    public Individual_Authors(String email, String name){
-        super(email,name);
+    public Individual_Authors(String email, String name) {
+        super(email, name);
         this.adHocTeamMembers = new ArrayList<Ad_Hoc_Teams_Members>();
     }
 }

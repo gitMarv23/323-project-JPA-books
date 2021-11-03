@@ -4,17 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="jpa mini hw template">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d0d0b9ab-5a24-4ad9-92cb-8d3ab17c12fe" name="Changes" comment="Streamlines code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/csulb/cecs323/app/CarClub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/csulb/cecs323/model/Cars.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/csulb/cecs323/model/Owners.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/csulb/cecs323/model/auto_body_styles.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sql/seed-data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/app/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Ad_Hoc_Teams_Members.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Ad_Hoc_Teams_Members.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Authoring_Entities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Authoring_Entities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Books.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Books.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Individual_Authors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Individual_Authors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Publishers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/Publishers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/WritingGroups.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csulb/cecs323/model/WritingGroups.java" afterDir="false" />
     </list>
+    <list id="e50bf78b-095a-4b50-8f4b-1bb291197f1a" name="Changes by marvin" comment="Changes by marvin" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +27,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Pull.Settings">
+    <option name="OPTIONS">
+      <set>
+        <option value="REBASE" />
+      </set>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -35,7 +42,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -54,7 +60,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1zcB5oovxI8CpaiGFVcvLEWykNc" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -76,10 +82,23 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="jpb.reverseEngineering" />
   </component>
-  <component name="RunManager" selected="Application.CarClub">
+  <component name="RunManager" selected="Application.Library">
     <configuration name="CarClub" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="csulb.cecs323.app.CarClub" />
       <module name="323 Project JPA Books" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="csulb.cecs323.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Library" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="csulb.cecs323.app.Library" />
+      <module name="cecs323-jpa-Library" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="csulb.cecs323.app.*" />
@@ -100,8 +119,14 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.CarClub" />
+      <item itemvalue="Database Script.Books.sql" />
+      <item itemvalue="Application.Library" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Library" />
         <item itemvalue="Application.CarClub" />
         <item itemvalue="Database Script.Books.sql" />
       </list>
@@ -118,6 +143,7 @@
       <workItem from="1634437316801" duration="2840000" />
       <workItem from="1634441019496" duration="2458000" />
       <workItem from="1634444641150" duration="430000" />
+      <workItem from="1635915908056" duration="172000" />
     </task>
     <task id="LOCAL-00001" summary="jpa mini hw template">
       <created>1634443331775</created>
