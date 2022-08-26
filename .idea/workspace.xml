@@ -121,8 +121,8 @@
     </configuration>
     <list>
       <item itemvalue="Application.CarClub" />
-      <item itemvalue="Database Script.Books.sql" />
       <item itemvalue="Application.Library" />
+      <item itemvalue="Database Script.Books.sql" />
     </list>
     <recent_temporary>
       <list>
