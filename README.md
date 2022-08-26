@@ -12,4 +12,4 @@ Database design in Java to simulate a library entity that coordinates various as
 Follow documentation on associated websites to install requirements, and then open project with IntelliJ IDEA.
 
 ## Demo
-https://user-images.githubusercontent.com/46500443/186823765-1ded2f3c-6e67-4854-bbb7-d31d2f18b3f0.mov
+Uploading JPA Demo.mov…
